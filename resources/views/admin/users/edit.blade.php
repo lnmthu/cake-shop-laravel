@@ -25,6 +25,8 @@
                         <form action="admin/users/{{$user->id}}" method="POST">
                             <input type="hidden" name="_method" value="PUT">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
+                             <fieldset>
+                                <legend>Phần bắt buộc</legend>
                             <div class="form-group">
                                 <label>Quyền</label>
                                 <label class="radio-inline">
@@ -42,7 +44,11 @@
                                 <label>Email</label>
                                 <input disabled="" class="form-control" name="email" placeholder="Nhập email" value="{{$user->email}}" data-validation="email" data-validation-error-msg="Làm ơn nhập E-mail hợp lệ" />
                             </div>
-                            <input type="checkbox" id="changePass" name="changePass">Đổi mật khẩu
+                            
+                            </fieldset>
+                             <fieldset>
+                                <legend><input type="checkbox" id="changePass" name="changePass"> Đổi mật khẩu</legend>
+                            
                             <div class="form-group">
                                 <label>Mật khẩu</label>
                                 <input disabled="" class="form-control password" type="password" placeholder="Nhập mật khẩu" name="pass_confirmation"  data-validation="length" data-validation-length="min8" data-validation-error-msg="Làm ơn nhập mật khẩu ít nhất 8 kí tự"  />
@@ -52,7 +58,9 @@
                                 <label>Nhập lại mật khẩu</label>
                                 <input disabled="" class="form-control password" type="password"  placeholder="Nhập lại mật khẩu" name="pass" data-validation="confirmation" data-validation-error-msg="Làm ơn nhập lại mật khẩu khớp với mật khẩu ban đầu"/>
                             </div>
-                            <input type="checkbox" name="changeOption" id="changeOption">Phần tùy chọn<br>
+                                </fieldset>
+                             <fieldset>
+                                <legend><input type="checkbox" name="changeOption" id="changeOption"> Phần tùy chọn</legend>
                             <div class="form-group">
                                 <label>Số diện thoại</label>
                                 <input disabled="" class="form-control option" name="phone_number" placeholder="Nhập số diện thoại" value="{{$user->phone_number}}" data-validation="number"  data-validation-error-msg="Làm ơn số điện thoại" />

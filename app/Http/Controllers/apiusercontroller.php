@@ -37,11 +37,13 @@ class apiusercontroller extends Controller
      */
     public function store(Request $r)
     {
+
         $user=new User();
         $user->name=$r->name;
         $user->email=$r->email;
         $user->password=bcrypt($r->pass);
         $user->quyen=$r->quyen;
+
         if($r->changeOption)
         {
             

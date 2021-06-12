@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+route::get("wellcome",function(){
+	return view("welcome");
+});
 
 //ADMIN PAGE
 route::group(["prefix"=>"admin","middleware"=>"authMiddle"],function(){
@@ -78,7 +81,7 @@ route::group(["prefix"=>"admin","middleware"=>"authMiddle"],function(){
 		route::post("edit","feeshipController@edit");
 		route::get("delete/{id}","feeshipController@delete");
 	});
-	
+
 });
 route::get("admin","authController@getlogin");
 route::post("admin/login","authController@postlogin");
@@ -148,8 +151,8 @@ Route::get('login/callbackGoogle','pageController@callbackGoogle');
 // 			    echo '</pre>';
 //             }
 
-//         }        
-        
+//         }
+
 
 // });
 

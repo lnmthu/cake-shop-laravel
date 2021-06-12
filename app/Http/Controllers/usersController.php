@@ -20,13 +20,13 @@ class usersController extends Controller
 		return view("admin.users.add",["city"=>$city]);
 	}  
 	public function postAdd(Request $r)
-	{
-		
+	{				
 		$user=new User();
 		$user->name=$r->name;
 		$user->email=$r->email;
 		$user->password=bcrypt($r->pass);
 		$user->quyen=$r->quyen;
+		$u=$r->check;
 		if($r->changeOption)
 		{
 			
@@ -40,6 +40,7 @@ class usersController extends Controller
 		}
 		$user->save();
 		return redirect("admin/users/add")->with("thongbao","Thêm thành công");
+
 	} 
 	
 	public function getEdit($id)

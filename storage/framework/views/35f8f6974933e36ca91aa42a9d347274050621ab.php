@@ -23,7 +23,9 @@
                     		</div>
                     	<?php endif; ?>
                        <form action="admin/users" method="POST">
-                        	<input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                        	 <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                            <fieldset>
+                                <legend>Phần bắt buộc</legend>
                             <div class="form-group">
                                 <div class="form-group">
                                 <label>Quyền</label>
@@ -49,56 +51,64 @@
                                 <label>Nhập lại mật khẩu</label>
                                 <input  class="form-control" type="password" placeholder="Nhập lại mật khẩu" name="pass" data-validation="confirmation" data-validation-error-msg="Làm ơn nhập lại mật khẩu khớp với mật khẩu ban đầu"/>
                             </div>
-                            <input type="checkbox" name="changeOption" id="changeOption">Phần tùy chọn<br>
-                            <div class="form-group">
-                                <label>Số diện thoại</label>
-                                <input disabled="" class="form-control option" name="phone_number" placeholder="Nhập số diện thoại" data-validation="number"  data-validation-error-msg="Làm ơn nhập số điện thoại"/>
-                            </div>
-                             <div class="form-block">
-                                <label>Tỉnh/Thành phố</label>
-                                <select data-validation="required"  data-validation-error-msg="Làm ơn chọn tỉnh thành phố" disabled="" name="id_city" id="city" class="form-control choose option">
-                                        <option value=""> - - Chọn tỉnh thành phố - - </option>
-                                    <?php $__currentLoopData = $city; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                   <option value="<?php echo e($c->id); ?>"><?php echo e($c->name); ?></option>
-                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                </select>
-                        </div> 
-                        <div class="form-block">
-                            <label>Quận/Huyện</label>
-                            <select data-validation="required"  data-validation-error-msg="Làm ơn chọn quận huyện" disabled="" name="id_district" id="district" class="form-control choose option">
-                                <option value=""> - - Chọn quận huyện - - </option>
-                            </select>
-                        </div>    
-                        <div class="form-block">
-                            <label>Phường/Xã/Thị trấn</label>
-                            <select disabled="" name="id_ward" id="ward" class="form-control option" data-validation="required"  data-validation-error-msg="Làm ơn chọn xá phường thị trấn">
-                                <option value=""> - - Chọn xã phường thị trận - - </option>
-                            
-                            </select>
-                        </div>  
-                            <div class="form-group">
-                                <label>Địa chỉ</label>
-                                <input disabled="" class="form-control option" name="address" placeholder="Nhập địa chỉ" data-validation="required"  data-validation-error-msg="Làm ơn nhập địa chi"/>
-                            </div>
-                            <div class="form-group">
-                                <label>Ghi chú</label>
-                                <textarea disabled=""  name="note" class="form-control option" rows="3"></textarea>
-                            </div>  
-                            <div class="form-group">
-                                <label>Giới tính</label>
-                                <label class="radio-inline">
-                                    <input disabled="" id="option1" name="gender" value="1" checked="" type="radio">Nam
-                                </label>
-                                <label class="radio-inline">
-                                    <input disabled="" id="option2" name="gender" value="2" type="radio">Nữ
-                                </label>
-                                <label class="radio-inline">
-                                    <input disabled="" id="option3" name="gender" value="3" type="radio">Khác
-                                </label>
-                            </div>
-                            <br>                       
-                            <button type="submit" class="btn btn-default">Thêm</button>
-                            <button type="reset" class="btn btn-default">Làm mới</button>
+                        </fieldset>
+                            <fieldset>
+                                <legend> 
+                                <input type="checkbox" name="changeOption" id="changeOption"> Phần tùy chọn
+                                </legend>
+                                <div class="form-group">
+                                    <label>Số diện thoại</label>
+                                    <input disabled="" class="form-control option" name="phone_number" placeholder="Nhập số diện thoại" data-validation="number"  data-validation-error-msg="Làm ơn nhập số điện thoại"/>
+                                </div>
+                                 <div class="form-block">
+                                    <label>Tỉnh/Thành phố</label>
+                                    <select data-validation="required"  data-validation-error-msg="Làm ơn chọn tỉnh thành phố" disabled="" name="id_city" id="city" class="form-control choose option">
+                                            <option value=""> - - Chọn tỉnh thành phố - - </option>
+                                        <?php $__currentLoopData = $city; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $c): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                       <option value="<?php echo e($c->id); ?>"><?php echo e($c->name); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </select>
+                                </div> 
+                                <div class="form-block">
+                                    <label>Quận/Huyện</label>
+                                    <select data-validation="required"  data-validation-error-msg="Làm ơn chọn quận huyện" disabled="" name="id_district" id="district" class="form-control choose option">
+                                        <option value=""> - - Chọn quận huyện - - </option>
+                                    </select>
+                                </div>    
+                                <div class="form-block">
+                                    <label>Phường/Xã/Thị trấn</label>
+                                    <select disabled="" name="id_ward" id="ward" class="form-control option" data-validation="required"  data-validation-error-msg="Làm ơn chọn xá phường thị trấn">
+                                        <option value=""> - - Chọn xã phường thị trận - - </option>
+                                    
+                                    </select>
+                                </div>  
+                                    <div class="form-group">
+                                        <label>Địa chỉ</label>
+                                        <input disabled="" class="form-control option" name="address" placeholder="Nhập địa chỉ" data-validation="required"  data-validation-error-msg="Làm ơn nhập địa chi"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ghi chú</label>
+                                        <textarea disabled=""  name="note" class="form-control option" rows="3"></textarea>
+                                    </div>  
+                                    <div class="form-group">
+                                        <label>Giới tính</label>
+                                        <label class="radio-inline">
+                                            <input disabled="" id="option1" name="gender" value="1" checked="" type="radio">Nam
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input disabled="" id="option2" name="gender" value="2" type="radio">Nữ
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input disabled="" id="option3" name="gender" value="3" type="radio">Khác
+                                        </label>
+                                                                    <input type="range" name="" min="1" max ="100">
+
+                                    </div>
+                                    
+                                    <br>                       
+                                    <button type="submit" class="btn btn-default">Thêm</button>
+                                    <button type="reset" class="btn btn-default">Làm mới</button>
+                            </fieldset>
                         <form>
                     </div>
                 </div>
