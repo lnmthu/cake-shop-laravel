@@ -49,15 +49,14 @@ route::group(["prefix"=>"admin","middleware"=>"authMiddle"],function(){
 		route::post("edit/{id}","slideController@postEdit");
 		route::get("delete/{id}","slideController@getDelete");
 	});
-	route::resource("users","apiusercontroller");
-	//route::group(["prefix"=>"users"],function(){
-		// route::get("list","usersController@getList");
-		// route::get("add","usersController@getAdd");
-		// route::post("add","usersController@postAdd");
-		// route::get("edit/{id}","usersController@getEdit");
-		// route::post("edit/{id}","usersController@postEdit");
-		// route::get("delete/{id}","usersController@getDelete");
-	//});
+	route::group(["prefix"=>"users"],function(){
+		route::get("list","usersController@getList");
+		route::get("add","usersController@getAdd");
+		route::post("add","usersController@postAdd");
+		route::get("edit/{id}","usersController@getEdit");
+		route::post("edit/{id}","usersController@postEdit");
+		route::get("delete/{id}","usersController@getDelete");
+	});
 	route::group(["prefix"=>"statistical"],function(){
 		route::get("sales","statisticalController@sales");
 		route::get("stocking","statisticalController@stocking");
