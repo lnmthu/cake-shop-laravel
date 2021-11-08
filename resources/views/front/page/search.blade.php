@@ -21,7 +21,7 @@
 									<div class="single-item">
 										<div class="ribbon-wrapper"><div class="ribbon sale">@if($p->promotion_price){{"Khuyến mãi"}}@endif</div></div>
 										<div class="single-item-header">
-											<a href="detailproduct/{{$p->id}}"><img src="image/product/{{$p->img}}" alt=""></a>
+											<a href="detailproduct/{{$p->id}}"><img class='copingImg' src="image/product/{{$p->img}}" alt=""></a>
 										</div>
 										<div class="single-item-body">
 											<p class="single-item-title">{{$p->name}}</p>
@@ -59,7 +59,7 @@
 
 						<div class="space50">&nbsp;</div>
 
-						
+
 					</div>
 				</div> <!-- end section with sidebar and main content -->
 

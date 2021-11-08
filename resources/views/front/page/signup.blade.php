@@ -8,16 +8,16 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb">
-					<a href="home">Trang chủ</a> / <span>Đăng ký</span>
+					<a href="">Trang chủ</a> / <span>Đăng ký</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div> -->
-	
+
 	<div class="container">
 		<div id="content">
-			
+
 			<form action="signup" method="post" class="beta-form-checkout">
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
 				<div class="row">
@@ -26,7 +26,7 @@
 						<h4>Form Đăng ký</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
-                    		<div class="alert alert-danger"> 
+                    		<div class="alert alert-danger">
                     			@foreach($errors->all() as $er)
                     				{{$er}}<br>
                     			@endforeach

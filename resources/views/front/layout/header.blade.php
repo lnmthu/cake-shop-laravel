@@ -25,7 +25,7 @@
 		<div class="header-body">
 			<div class="container beta-relative">
 				<div class="pull-left">
-					<a href="home" id="logo"><img src="assets/dest/images/logo-cake.png" width="200px" alt=""></a>
+					<a href="" id="logo"><img src="assets/dest/images/logo-cake.png" width="200px" alt=""></a>
 				</div>
 				<div class="pull-right beta-components space-left ov">
 					<div class="space10">&nbsp;</div>
@@ -48,8 +48,8 @@
 												<span class="cart-item-amount">{{$c->qty}}*<span>{{$c->price}}</span></span>
 											</div>
 										</div>
-									</div>		
-									@endforeach				
+									</div>
+									@endforeach
 
 									<div class="cart-caption">
 										<div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">{{Cart::priceTotal(0)}} VND</span></div>
@@ -74,7 +74,7 @@
 				<div class="visible-xs clearfix"></div>
 				<nav class="main-menu">
 					<ul class="l-inline ov">
-						<li><a href="home">Trang chủ</a></li>
+						<li><a href="">Trang chủ</a></li>
 						<li><a>Loại bánh</a>
 							<ul class="sub-menu">
 								@foreach($type as $t)

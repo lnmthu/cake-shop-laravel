@@ -9,13 +9,13 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb font-large">
-					<a href="home">Trang chủ</a> / <span>Chi tiết đơn hàng</span>
+					<a href="">Trang chủ</a> / <span>Chi tiết đơn hàng</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	<br>	 -->				
+	<br>	 -->
 	<div class="container">
 			<div class="table-responsive">
 						@if(session("thongbao"))
@@ -27,7 +27,7 @@
 							<?php session()->forget("loi");?>
 						@endif
 				<!-- Shop Products Table -->
-				<h3>Trạng thái đơn hàng #{{$bill->id}}: 
+				<h3>Trạng thái đơn hàng #{{$bill->id}}:
 				 @switch($bill->active)
                         @case(0)
 						Đã tiếp nhận
@@ -56,12 +56,12 @@
 					</thead>
 
 					<tbody>
-						
+
 							<td class="product-name">
 								<span class="amount">{{$user->name}}</span>
 							</td>
 							<!--Update all cart-->
-	
+
 							<td class="product-price">
   								<span class="amount">{{$user->email}}</span>
 							</td>
@@ -88,7 +88,7 @@
 								<span class="amount">{{$user->note}}</span>
 							</td>
 						</tr>
-					</tbody>			
+					</tbody>
 				</table>
 				<table class="shop_table beta-shopping-cart-table" cellspacing="0">
 					<thead>
@@ -115,7 +115,7 @@
 								<span class="amount">{{number_format($detail->unit_price,0,"",".")}} <u>đ</u></span>
 							</td>
 							<!--Update all cart-->
-	
+
 							<td class="product-quantity">
   								<span class="amount">{{$detail->quantity}}</span>
 							</td>
@@ -128,8 +128,8 @@
 						</tr>
 					</tbody>
 					@endforeach
-			
-					
+
+
 				</table>
 				<!-- End of Shop Table Products -->
 			</div>
@@ -146,7 +146,7 @@
 					@if($bill->id_coupon)
 						@if($bill->coupon->condition==0)
 							<div class="cart-totals-row"><span>Giảm giá:</span> <span>{{number_format($bill->total_price_first*$bill->coupon->number,0,"",".")}} <u>đ</u></span></div>
-							
+
 						@else
 							<div class="cart-totals-row"><span>Giảm giá:</span> <span>{{number_format($bill->coupon->number,0,"",".")}} <u>đ</u></span></div>
 
@@ -169,7 +169,7 @@
 				<!-- End of Shop Table Products -->
 			</div>
 		</div> <!-- #content -->
-		
+
 	</div> <!-- .container -->
 	<br>
 @endsection

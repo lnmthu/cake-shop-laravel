@@ -8,26 +8,26 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb">
-					<a href="home">Trang chủ</a> / <span>Xác nhận thông tin</span>
+					<a href="">Trang chủ</a> / <span>Xác nhận thông tin</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div> -->
-	
+
 	<div class="container" >
 		<div id="content">
-			
+
 			<form action="checkoutaddress" method="post" class="beta-form-checkout">
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
 				<div class="row">
 					<div class="col-sm-6">
-						
+
 						@if(Auth::check())
 						<h4>Thông tin giao hàng</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
-                            <div class="alert alert-danger"> 
+                            <div class="alert alert-danger">
                                 @foreach($errors->all() as $er)
                                     {{$er}}<br>
                                 @endforeach
@@ -48,29 +48,29 @@
                                     	<option value=""> - - Chọn tỉnh thành phố - - </option>
                                     @foreach($city as $c)
                                         <option <?php
-                                                    if(Auth::user()->id_city==$c->id) 
+                                                    if(Auth::user()->id_city==$c->id)
                                        				 {
                                        				 	echo "selected";
-                                        				$district=$c->district; 
+                                        				$district=$c->district;
                                         			  }
                                         		?>
                                         			   value="{{$c->id}}">{{$c->name}}</option>
                                     @endforeach
                                 </select>
-                            </div> 
+                            </div>
                             <div class="form-block">
                                 <label>Quận/Huyện</label>
                                 <select name="id_district" id="district" class="form-control choose">
                                     <option value=""> - - Chọn quận huyện - - </option>
                                  @if($district)
                                       @foreach($district as $d)
-        								
+
                                             <option <?php if(Auth::user()->id_district==$d->id)
         									 $ward=$d->ward; echo "selected";?> value="{{$d->id}}">{{$d->name}}</option>
                                        @endforeach
                                     @endif
                                 </select>
-                            </div>    
+                            </div>
                             <div class="form-block">
                                 <label>Phường/Xã/Thị trấn</label>
                                 <select name="id_ward" id="ward" class="form-control">
@@ -82,7 +82,7 @@
                                        @endforeach
                                @endif
                                 </select>
-                            </div>   
+                            </div>
 
 						<div class="form-block">
 							<label for="adress">Địa chỉ*</label>
@@ -98,12 +98,12 @@
                                    <input @if(Auth::user()->gender==2){{"checked"}}@endif id="gender" name="gender" value="2" type="radio"class="input-radio" style="width: 10%"><span style="margin-right: 5%">Nữ</span>
                                    <input @if(Auth::user()->gender==3){{"checked"}}@endif id="gender" name="gender" value="3" type="radio"class="input-radio" style="width: 10%"><span style="margin-right: 5%">Khác</span>
 						</div>
-						
+
 							<div class="text-center"><button class="beta-btn primary" type="submit" >Đặt hàng với thông tin này <i class="fa fa-chevron-right"></i></button></div>
 
 						@endif
 					</div>
-					
+
 				</div>
 			</form>
 		</div> <!-- #content -->
@@ -112,7 +112,7 @@
 @section("script")
 <script type="text/javascript">
     $(document).ready(function($){
-    	
+
       $(".choose").change(function(){
       	var action= $(this).attr("id");
          var id =$(this).val();

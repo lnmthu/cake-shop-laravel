@@ -8,16 +8,16 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb">
-					<a href="home">Trang chủ</a> / <span>Thông tin</span>
+					<a href="">Trang chủ</a> / <span>Thông tin</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div> -->
-	
+
 	<div class="container">
 		<div id="content">
-			
+
 			<form action="infor" method="post" class="beta-form-checkout">
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
 				<div class="row">
@@ -27,7 +27,7 @@
 						<h4>Form Thông tin</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
-                    		<div class="alert alert-danger"> 
+                    		<div class="alert alert-danger">
                     			@foreach($errors->all() as $er)
                     				{{$er}}<br>
                     			@endforeach
@@ -62,16 +62,16 @@
                                 <select name="id_city" id="city" class="form-control choose">
                                     	<option value=""> - - Chọn tỉnh thành phố - - </option>
                                     @foreach($city as $c)
-                                        <option <?php if(Auth::user()->id_city==$c->id) 
+                                        <option <?php if(Auth::user()->id_city==$c->id)
                                        				 {
                                        				 	echo "selected";
-                                        				$district=$c->district; 
+                                        				$district=$c->district;
                                         			  }
                                         		?>
                                         			   value="{{$c->id}}">{{$c->name}}</option>
                                     @endforeach
                                 </select>
-                        </div> 
+                        </div>
                         <div class="form-block">
                             <label>Quận/Huyện*</label>
                             <select name="id_district" id="district" class="form-control choose">
@@ -83,7 +83,7 @@
 	                           @endforeach
                            @endif
                             </select>
-                        </div>    
+                        </div>
                         <div class="form-block">
                             <label>Phường/Xã/Thị trấn*</label>
                             <select name="id_ward" id="ward" class="form-control">
@@ -95,7 +95,7 @@
 	                           @endforeach
                            @endif
                             </select>
-                        </div>  
+                        </div>
 						<div class="form-block">
 							<label for="adress">Địa chỉ*</label>
 							<input type="text" id="adress" name="address" value="{{Auth::user()->address}}" placeholder="Nhập địa chỉ" required>
@@ -128,7 +128,7 @@
 @section("script")
 <script type="text/javascript">
     $(document).ready(function($){
-    	
+
       $(".choose").change(function(){
       	var action= $(this).attr("id");
          var id =$(this).val();

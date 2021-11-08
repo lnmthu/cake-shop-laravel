@@ -8,7 +8,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="beta-products-list">
-							<h4>Bánh mới</h4>
+							<h4>Bánh mới nhất</h4>
 							<div class="beta-products-details">
 								<p class="pull-left">{{count($product)}} bánh</p>
 								<div class="clearfix"></div>
@@ -21,7 +21,7 @@
 									<div class="single-item">
 										<div class="ribbon-wrapper"><div class="ribbon sale">@if($p->promotion_price){{"Khuyến mãi"}}@endif</div></div>
 										<div class="single-item-header">
-											<a href="detailproduct/{{$p->id}}"><img width="500px" src="image/product/{{$p->img}}" alt=""></a>
+											<a href="detailproduct/{{$p->id}}"><img class='copingImg' width="500px" src="image/product/{{$p->img}}" alt=""></a>
 										</div>
 										<div class="single-item-body">
 											<p class="single-item-title">{{$p->name}}</p>
@@ -62,20 +62,20 @@
 						<div class="space50">&nbsp;</div>
 
 						<div class="beta-products-list">
-							<h4>Bánh ngon</h4>
+							<h4>Bánh ngon nhất</h4>
 							<div class="beta-products-details">
 								<p class="pull-left">{{count($product)}} bánh</p>
 								<div class="clearfix"></div>
 							</div>
 							<div class="row">
 								@foreach($topproduct as $t)
-								@if($t->active==1)								
+								@if($t->active==1)
 								<div class="col-sm-3">
 									<div class="single-item">
 										<div class="ribbon-wrapper"><div class="ribbon sale">@if($t->promotion_price){{"Khuyến mãi"}}@endif</div></div>
 
 										<div class="single-item-header">
-											<a href="detailproduct/{{$t->id}}"><img src="image/product/{{$t->img}}" alt=""></a>
+											<a href="detailproduct/{{$t->id}}"><img class='copingImg' src="image/product/{{$t->img}}" alt=""></a>
 										</div>
 										<div class="single-item-body">
 											<p class="single-item-title">{{$t->name}}</p>
@@ -110,7 +110,7 @@
 								@endforeach
 								<br>
 								<div class="row" style="text-align: center;">{{$topproduct->links()}}</div>
-								
+
 							</div>
 						</div> <!-- .beta-products-list -->
 					</div>

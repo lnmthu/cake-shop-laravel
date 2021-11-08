@@ -9,13 +9,13 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb font-large">
-					<a href="home">Trang chủ</a> / <span>Giỏ hàng</span>
+					<a href="">Trang chủ</a> / <span>Giỏ hàng</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div> -->
-						
+
 	<div class="container">
 		<div id="content">
 			<div class="table-responsive">
@@ -46,7 +46,7 @@
 						<tr class="cart_item">
 							<td class="product-name">
 								<div class="media">
-									<img width="100px" class="pull-left" src="image/product/{{$c->options->img}}" alt="">
+									<img  class="pull-left copingMiniImg" src="image/product/{{$c->options->img}}" alt="">
 									<div class="media-body">
 										<p class="font-large table-title">{{$c->name}}</p>
 									</div>
@@ -57,7 +57,7 @@
 							</td>
 							<!--Update all cart-->
 							@csrf
-							<input type="hidden" class="quantity_stock_{{$c->rowId}}" value="{{$product[$c->id]->quantity_stock}}">		
+							<input type="hidden" class="quantity_stock_{{$c->rowId}}" value="{{$product[$c->id]->quantity_stock}}">
 							<td class="product-quantity">
 								  <input type="number" value="{{$c->qty}}" data-row_id="{{$c->rowId}}" class="check_qty" id="quantity" name="quantity" min="1" max="5">
 							</td>
@@ -75,7 +75,7 @@
 					</tbody>
 					@endif
 					@endforeach
-			
+
 					<tfoot>
 						<tr>
 								@if(Cart::count()>0)
@@ -85,11 +85,11 @@
 									@csrf
 									<button type="submit"  class="beta-btn primary">Xóa giỏ hàng<i class="fa fa-chevron-right"></i></button><br>
 								</form>
-									<label for="coupon_code"></label> 
+									<label for="coupon_code"></label>
 								<div class="coupon">
 								<form action="applyCoupon" method="post">
 									@csrf
-									<input type="text" name="code"  placeholder="Mã giảm giá"> 
+									<input type="text" name="code"  placeholder="Mã giảm giá">
 									<button type="submit" class="beta-btn primary">Áp dụng mã giảm giá<i class="fa fa-chevron-right"></i></button>
 								</form>
 								@endif
@@ -158,7 +158,7 @@
 	                            });
                 	}else
                 		location.reload();
-                	
+
 				}
 			});
 		});

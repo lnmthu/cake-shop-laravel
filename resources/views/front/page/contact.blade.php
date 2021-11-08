@@ -8,19 +8,19 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb font-large">
-					<a href="home">Trang chủ</a> / <span>Liên hệ</span>
+					<a href="">Trang chủ</a> / <span>Liên hệ</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
  -->	<div class="beta-map">
-		
+
 		<div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3678.0141923553406!2d89.551518!3d22.801938!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff8ff8ef7ea2b7%3A0x1f1e9fc1cf4bd626!2sPranon+Pvt.+Limited!5e0!3m2!1sen!2s!4v1407828576904" ></iframe></div>
 	</div>
 	<div class="container">
 		<div id="content" class="space-top-none">
-			
+
 			<div class="space50">&nbsp;</div>
 			<div class="row">
 				<div class="col-sm-8">
@@ -28,7 +28,7 @@
 					<div class="space20">&nbsp;</div>
 					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani m id est laborum.</p>
 					<div class="space20">&nbsp;</div>
-					<form action="#" method="post" class="contact-form">	
+					<form action="#" method="post" class="contact-form">
 						<div class="form-block">
 							<input name="your-name" type="text" placeholder="Your Name (required)">
 						</div>

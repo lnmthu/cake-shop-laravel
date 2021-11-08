@@ -38,7 +38,7 @@
 					<div class="row">
 						<div class="col-sm-4">
 						<div class="ribbon-wrapper"><div class="ribbon sale">@if($prod->promotion_price){{"Khuyến mãi"}}@endif</div></div>
-							<img src="image/product/{{$prod->img}}" alt="">
+							<img class='copingBigImg' src="image/product/{{$prod->img}}" alt="">
 						</div>
 						<div class="col-sm-8">
 							<div class="single-item-body">
@@ -66,16 +66,16 @@
 								<p>Số lượng:</p>
 								<div class="single-item-options">
 								<input type="number" value="1" class="wc-select qty_{{$prod->id}}">
-								 <button type="button" class="add-to-cart pull-left" name="add-to-cart" data-id_product="{{$prod->id}}" ><i class="fa fa-shopping-cart"></i></button>  
+								 <button type="button" class="add-to-cart pull-left" name="add-to-cart" data-id_product="{{$prod->id}}" ><i class="fa fa-shopping-cart"></i></button>
 								</div>
 								@elseif($prod->quantity_stock<=0)
-								<div class="alert alert-danger" >Tạm hết</div>
+								<div class="alert alert-danger for-detail" >Tạm hết</div>
 									<div class="clearfix"></div>
 								@endif
-									
-							</form>	
+
+							</form>
 							<br>
-							<div class="fb-like" data-href="http://localhost/LaravelSell/public/detailproduct/{{$prod->id}}" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>	
+							<div class="fb-like" data-href="http://localhost/LaravelSell/public/detailproduct/{{$prod->id}}" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
 
 						</div>
 					</div>
@@ -88,7 +88,7 @@
 						</ul>
 
 						<div class="panel" id="tab-description">
-							
+
 							<p>{!!$prod->description!!}</p>
 						</div>
 						<div class="panel" id="tab-reviews">
@@ -109,7 +109,7 @@
 										<div class="ribbon-wrapper"><div class="ribbon sale">@if($r->promotion_price){{"Khuyến mãi"}}@endif</div></div>
 
 										<div class="single-item-header">
-											<a href="detailproduct/{{$r->id}}"><img src="image/product/{{$r->img}}" alt=""></a>
+											<a href="detailproduct/{{$r->id}}"><img class='copingImg' src="image/product/{{$r->img}}" alt=""></a>
 										</div>
 										<div class="single-item-body">
 											<p class="single-item-title">{{$r->name}}</p>
@@ -153,7 +153,7 @@
 								@foreach($saleProd as $s)
 								@if($s->active==1)
 								<div class="media beta-sales-item">
-									<a class="pull-left" href="detailproduct/{{$s->id}}"><img src="image/product/{{$s->img}}" alt=""></a>
+									<a class="pull-left" href="detailproduct/{{$s->id}}"><img  src="image/product/{{$s->img}}" alt=""></a>
 									<div class="media-body">
 										{{$s->name}}
 										<br>
@@ -194,7 +194,7 @@
 							</div>
 						</div>
 					</div> <!-- best sellers widget -->
-					
+
 				</div>
 			</div>
 		</div> <!-- #content -->

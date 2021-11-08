@@ -9,7 +9,7 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb font-large">
-					<a href="home">Trang chủ</a> / <span>Giới thiệu</span>
+					<a href="">Trang chủ</a> / <span>Giới thiệu</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -17,7 +17,7 @@
 	</div> -->
 
 	<div class="container">
-		
+
 		<div id="content">
 			<div class="our-history">
 				<h2 class="text-center wow fadeInDown">Our History</h2>
@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="history-slides">
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -50,9 +50,9 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -67,9 +67,9 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -84,9 +84,9 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -101,9 +101,9 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -118,9 +118,9 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -135,9 +135,9 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
-						<div> 
+						<div>
 							<div class="row">
 							<div class="col-sm-5">
 								<img src="assets/dest/images/history.jpg" alt="">
@@ -152,7 +152,7 @@
 								<div class="space20">&nbsp;</div>
 								<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem.</p>
 							</div>
-							</div> 
+							</div>
 						</div>
 					</div>
 				</div>
@@ -212,9 +212,9 @@
 			<div class="row">
 				<div class="col-sm-6 wow fadeInLeft">
 					<div class="beta-person media">
-					
+
 						<img class="pull-left" src="assets/dest/images/person2.jpg" alt="">
-					
+
 						<div class="media-body beta-person-body">
 							<h5>Bob Robertson</h5>
 							<p class="font-large">Founder</p>
@@ -225,9 +225,9 @@
 				</div>
 				<div class="col-sm-6 wow fadeInRight">
 					<div class="beta-person media ">
-					
+
 						<img class="pull-left" src="assets/dest/images/person3.jpg" alt="">
-					
+
 						<div class="media-body beta-person-body">
 							<h5>Mike Greenwood</h5>
 							<p class="font-large">Founder</p>
@@ -237,7 +237,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="space60">&nbsp;</div>
 			<h5 class="text-center other-title wow fadeInDown">The Best of Professionals</h5>
 			<p class="text-center wow fadeInUp">Nemo enims voluptatem quia volupas sit aspe aut odit aut fugit, sed quia <br />consequuntur magni dolores.</p>
@@ -284,7 +284,7 @@
 				</div>
 				<div class="col-sm-3">
 					<div class="beta-person beta-person-full">
-					<div class="bets-img-hover">	
+					<div class="bets-img-hover">
 						<img src="assets/dest/images/person4.jpg" alt="">
 					</div>
 						<div class="beta-person-body">

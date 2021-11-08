@@ -8,21 +8,21 @@
 			</div>
 			<div class="pull-right">
 				<div class="beta-breadcrumb">
-					<a href="home">Trang chủ</a> / <span>Đặt hàng</span>
+					<a href="">Trang chủ</a> / <span>Đặt hàng</span>
 				</div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div> -->
-	
+
 	<div class="container">
 		<div id="content">
-			
+
 			<form action="checkoutfinal" method="post" class="beta-form-checkout">
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
 				<div class="row">
 					@if(count($errors)>0)
-                    		<div class="alert alert-danger"> 
+                    		<div class="alert alert-danger">
                     			@foreach($errors->all() as $er)
                     				{{$er}}<br>
                     			@endforeach
@@ -38,7 +38,7 @@
 						<h4>Form Thông tin</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
-                    		<div class="alert alert-danger"> 
+                    		<div class="alert alert-danger">
                     			@foreach($errors->all() as $er)
                     				{{$er}}<br>
                     			@endforeach
@@ -123,7 +123,7 @@
 
 									<div class="clearfix"></div>
 							</div>
-							
+
 							<div class="your-order-head"><h5>Hình thức thanh toán</h5></div>
 							<div class="your-order-body">
 								<ul class="payment_methods methods">
@@ -133,7 +133,7 @@
 										<div class="payment_box payment_method_bacs" style="display: none;">
 											<?php $user=Auth::user();?>
 											Cửa hàng sẽ gửi hàng đến địa chỉ: <?php echo $user->address.", ".$user->ward->name.", ".$user->district->name.", ".$user->city->name;?>. Bạn xem hàng rồi thanh toán tiền cho nhân viên giao hàng
-										</div>						
+										</div>
 									</li>
 
 									<li class="payment_method_cheque">
@@ -145,11 +145,11 @@
 											<br>+ Chủ TK: Nguyễn A
 											<br>+ Ngân hàng ACB, Chi nhánh TPHCM<br>
 											Cửa hàng sẽ gửi hàng đến địa chỉ: <?php echo $user->address.", ".$user->ward->name.", ".$user->district->name.", ".$user->city->name;?>
-										</div>						
+										</div>
 									</li>
-									
+
 								</ul>
-								
+
 							</div>
 							<div class="your-order-head"><h5>Ghi chú</h5></div>
 									<textarea style="width: 550px" id="notes" name="note" placeholder="Điền thôn tin ghi chú đơn hàng"></textarea>
