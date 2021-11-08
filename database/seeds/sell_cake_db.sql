@@ -1012,27 +1012,27 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `name`, `id_type`, `description`, `quantity_stock`, `quantity_sold`, `unit_price`, `promotion_price`, `img`, `title`, `keywords`, `active`, `created_at`, `updated_at`) VALUES
-(1, 'Bánh Crepe Sầu riêng', 2, '<p>m&ocirc; tả</p>', 333467647, 23, 120000, NULL, '890653392_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>174578953</p>', 1, NULL, '2020-06-25 09:46:54'),
-(2, 'Bánh Crepe Chocolate', 1, '<p>m&ocirc; tả</p>', 0, 15, 220000, NULL, '184244847_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>402612581</p>', 1, NULL, '2020-06-18 19:59:33'),
-(3, 'Bánh Crepe Sầu riêng - Chuối', 4, '<p>m&ocirc; tả</p>', 1694603721, 6, 220000, NULL, '713152248_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>370487276</p>', 0, NULL, '2020-06-18 11:16:11'),
-(4, 'Bánh Crepe Pháp', 3, '<p>m&ocirc; tả</p>', 436292500, 11, 100000, NULL, '63497907_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>498190930</p>', 1, NULL, '2020-06-18 10:56:40'),
-(5, 'Bánh Crepe Táo', 4, '<p>m&ocirc; tả</p>', 1034950834, 25, 100000, NULL, '158589366_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>280403017</p>', 1, NULL, '2020-06-18 10:59:46'),
-(6, 'Bánh kem Dâu I', 4, '<p>m&ocirc; tả</p>', 735915812, 34, 200000, NULL, '1131147671_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>516343043</p>', 1, NULL, '2020-06-18 10:59:58'),
-(7, 'Bánh trái cây II', 3, '<p>m&ocirc; tả</p>', 870504161, 0, 300000, NULL, '1301829356_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>566698176</p>', 1, NULL, '2020-06-18 10:57:34'),
-(8, 'Apple Cake', 2, '<p>m&ocirc; tả</p>', 306144747, 0, 130000, NULL, '2005420933_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1057270992</p>', 1, NULL, '2020-06-18 10:57:53'),
-(9, 'Bánh ngọt nhân cream táo', 2, '<p>m&ocirc; tả</p>', 945357693, 0, 240000, NULL, '1824437464_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>186038540</p>', 1, NULL, '2020-06-18 10:58:13'),
-(10, 'Bánh Chocolate Trái cây', 1, '<p>m&ocirc; tả</p>', 668105542, 27, 560000, NULL, '587432918_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>297981530</p>', 1, NULL, '2020-06-25 03:36:46'),
-(11, 'Peach Cake', 4, '<p>m&ocirc; tả</p>', 1955216726, 21, 1000000, NULL, '1831402102_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1344564701</p>', 1, NULL, '2020-06-20 07:34:55'),
-(12, 'Bánh bông lan trứng muối I', 5, '<p>m&ocirc; tả</p>', 459369900, 0, 340000, NULL, '1774963444_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2040512772</p>', 1, NULL, '2020-06-18 11:02:06'),
-(13, 'Bánh Scone Peach Cake', 1, '<p>m&ocirc; tả</p>', 22361876, 0, 20000, NULL, '1690421845_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>194421648</p>', 1, NULL, '2020-06-18 19:59:33'),
-(14, 'Bánh mì Loai I', 3, '<p>m&ocirc; tả</p>', 78130226, 0, 100000, NULL, '189799846_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1002973186</p>', 1, NULL, '2020-06-18 11:01:29'),
-(15, 'Bánh kem Chocolate Dâu I', 1, '<p>m&ocirc; tả</p>', 146653336, 0, 300000, NULL, '781159227_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2081904478</p>', 1, NULL, '2020-06-18 19:59:33'),
-(16, 'Bánh kem Trái cây I', 3, '<p>m&ocirc; tả</p>', 1752084193, 0, 400000, NULL, '128116312_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>949810647</p>', 1, NULL, '2020-06-18 11:00:45'),
-(17, 'Bánh kem Flower Fruit', 2, '<p>m&ocirc; tả</p>', 1187624060, 25, 500000, NULL, '847277698_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2119560969</p>', 1, NULL, '2020-06-23 08:52:45'),
-(18, 'Bánh kem Strawberry Delight', 4, '<p>m&ocirc; tả</p>', 1787857016, 34, 600000, NULL, '958477363_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2128277555</p>', 1, NULL, '2020-06-25 03:36:46'),
-(19, 'Ocean Pizza', 4, '<p>m&ocirc; tả</p>', 518218660, 27, 25000, 10000, '566327378_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1543235303</p>', 1, NULL, '2020-06-18 10:59:16'),
-(20, 'Bánh siêu cay 1', 6, '<p>m&ocirc; tả</p>', 0, 105, 300000, 250000, '2013910603_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>mbnmbmn</p>', 1, '2020-06-04 08:51:11', '2020-06-20 10:00:43'),
-(21, 'Bánh siêu cay 2', 6, '<p>m&ocirc; tả</p>', 0, 109, 320000, NULL, '87368518_sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>12313212</p>', 1, '2020-06-04 10:38:32', '2020-06-20 10:00:43');
+(1, 'Bánh Crepe Sầu riêng', 2, '<p>m&ocirc; tả</p>', 333467647, 23, 120000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>174578953</p>', 1, NULL, '2020-06-25 09:46:54'),
+(2, 'Bánh Crepe Chocolate', 1, '<p>m&ocirc; tả</p>', 0, 15, 220000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>402612581</p>', 1, NULL, '2020-06-18 19:59:33'),
+(3, 'Bánh Crepe Sầu riêng - Chuối', 4, '<p>m&ocirc; tả</p>', 1694603721, 6, 220000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>370487276</p>', 0, NULL, '2020-06-18 11:16:11'),
+(4, 'Bánh Crepe Pháp', 3, '<p>m&ocirc; tả</p>', 436292500, 11, 100000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>498190930</p>', 1, NULL, '2020-06-18 10:56:40'),
+(5, 'Bánh Crepe Táo', 4, '<p>m&ocirc; tả</p>', 1034950834, 25, 100000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>280403017</p>', 1, NULL, '2020-06-18 10:59:46'),
+(6, 'Bánh kem Dâu I', 4, '<p>m&ocirc; tả</p>', 735915812, 34, 200000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>516343043</p>', 1, NULL, '2020-06-18 10:59:58'),
+(7, 'Bánh trái cây II', 3, '<p>m&ocirc; tả</p>', 870504161, 0, 300000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>566698176</p>', 1, NULL, '2020-06-18 10:57:34'),
+(8, 'Apple Cake', 2, '<p>m&ocirc; tả</p>', 306144747, 0, 130000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1057270992</p>', 1, NULL, '2020-06-18 10:57:53'),
+(9, 'Bánh ngọt nhân cream táo', 2, '<p>m&ocirc; tả</p>', 945357693, 0, 240000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>186038540</p>', 1, NULL, '2020-06-18 10:58:13'),
+(10, 'Bánh Chocolate Trái cây', 1, '<p>m&ocirc; tả</p>', 668105542, 27, 560000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>297981530</p>', 1, NULL, '2020-06-25 03:36:46'),
+(11, 'Peach Cake', 4, '<p>m&ocirc; tả</p>', 1955216726, 21, 1000000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1344564701</p>', 1, NULL, '2020-06-20 07:34:55'),
+(12, 'Bánh bông lan trứng muối I', 5, '<p>m&ocirc; tả</p>', 459369900, 0, 340000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2040512772</p>', 1, NULL, '2020-06-18 11:02:06'),
+(13, 'Bánh Scone Peach Cake', 1, '<p>m&ocirc; tả</p>', 22361876, 0, 20000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>194421648</p>', 1, NULL, '2020-06-18 19:59:33'),
+(14, 'Bánh mì Loai I', 3, '<p>m&ocirc; tả</p>', 78130226, 0, 100000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1002973186</p>', 1, NULL, '2020-06-18 11:01:29'),
+(15, 'Bánh kem Chocolate Dâu I', 1, '<p>m&ocirc; tả</p>', 146653336, 0, 300000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2081904478</p>', 1, NULL, '2020-06-18 19:59:33'),
+(16, 'Bánh kem Trái cây I', 3, '<p>m&ocirc; tả</p>', 1752084193, 0, 400000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>949810647</p>', 1, NULL, '2020-06-18 11:00:45'),
+(17, 'Bánh kem Flower Fruit', 2, '<p>m&ocirc; tả</p>', 1187624060, 25, 500000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2119560969</p>', 1, NULL, '2020-06-23 08:52:45'),
+(18, 'Bánh kem Strawberry Delight', 4, '<p>m&ocirc; tả</p>', 1787857016, 34, 600000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2128277555</p>', 1, NULL, '2020-06-25 03:36:46'),
+(19, 'Ocean Pizza', 4, '<p>m&ocirc; tả</p>', 518218660, 27, 25000, 10000, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1543235303</p>', 1, NULL, '2020-06-18 10:59:16'),
+(20, 'Bánh siêu cay 1', 6, '<p>m&ocirc; tả</p>', 0, 105, 300000, 250000, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>mbnmbmn</p>', 1, '2020-06-04 08:51:11', '2020-06-20 10:00:43'),
+(21, 'Bánh siêu cay 2', 6, '<p>m&ocirc; tả</p>', 0, 109, 320000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>12313212</p>', 1, '2020-06-04 10:38:32', '2020-06-20 10:00:43');
 
 -- --------------------------------------------------------
 
