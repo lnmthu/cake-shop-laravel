@@ -19,7 +19,9 @@
 								@if($p->active==1)
 								<div class="col-sm-3">
 									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">@if($p->promotion_price){{"Khuyến mãi"}}@endif</div></div>
+                                    @if($p->promotion_price)
+										<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                                    @endif
 										<div class="single-item-header">
 											<a href="detailproduct/{{$p->id}}"><img class='copingImg' width="500px" src="image/product/{{$p->img}}" alt=""></a>
 										</div>
@@ -54,9 +56,10 @@
 								</div>
 								@endif
 								@endforeach
-								<div class="row" style="text-align: center;">{{$newproduct->links()}}</div>
 
 							</div>
+                            <div class="customPagination" >{{$newproduct->links()}}</div>
+
 						</div> <!-- .beta-products-list -->
 
 						<div class="space50">&nbsp;</div>
@@ -72,7 +75,9 @@
 								@if($t->active==1)
 								<div class="col-sm-3">
 									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">@if($t->promotion_price){{"Khuyến mãi"}}@endif</div></div>
+                                    @if($t->promotion_price)
+										<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                                    @endif
 
 										<div class="single-item-header">
 											<a href="detailproduct/{{$t->id}}"><img class='copingImg' src="image/product/{{$t->img}}" alt=""></a>
@@ -109,9 +114,8 @@
 								@endif
 								@endforeach
 								<br>
-								<div class="row" style="text-align: center;">{{$topproduct->links()}}</div>
-
 							</div>
+                            <div class="customPagination" >{{$topproduct->links()}}</div>
 						</div> <!-- .beta-products-list -->
 					</div>
 				</div> <!-- end section with sidebar and main content -->

@@ -19,7 +19,9 @@
 								@if($p->active==1)
 								<div class="col-sm-3">
 									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">@if($p->promotion_price){{"Khuyến mãi"}}@endif</div></div>
+                                    @if($p->promotion_price)
+										<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                                    @endif
 										<div class="single-item-header">
 											<a href="detailproduct/{{$p->id}}"><img class='copingImg' src="image/product/{{$p->img}}" alt=""></a>
 										</div>

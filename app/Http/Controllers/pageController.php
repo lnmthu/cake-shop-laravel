@@ -12,7 +12,7 @@ use Cart;
 use Mail;
 use Socialite;
 use App\Social;
-use App\Rules\Captcha; 
+use App\Rules\Captcha;
 use App\coupon;
 use App\feeship;
 use App\city;
@@ -24,7 +24,7 @@ class pageController extends Controller
 {
     public function __construct()
     {
-        
+
         if(Auth::check())
         {
             $s=Social::where('id_user',Auth::user()->id)->first;
@@ -80,17 +80,18 @@ class pageController extends Controller
         $newproduct=product::orderby('created_at','desc')->where('active',1)->paginate(4,['*'], 'pag');
         $topproduct=product::orderby('unit_price','desc')->where('active',1)->paginate(4);
         return view('front.page.home',['newproduct'=>$newproduct,'topproduct'=>$topproduct]);
-    }   
+    }
     public function product(Request $r,$id_type)
     {
         $type=type_product::find($id_type);
         $meta_desc=$type->description;
         $meta_keywords=$type->keyword;
         $meta_title=$type->title;
+        $name_type=$type->name;
         $url_canonical=$r->url();
         $newproduct=product::where('id_type',$id_type)->where('active',1)->orderby('created_at','desc')->paginate(4,['*'], 'pag');
         $topproduct=product::where('id_type',$id_type)->where('active',1)->orderby('unit_price','desc')->paginate(4);
-        return view('front.page.product')->with(compact('newproduct','topproduct','meta_desc','meta_keywords','meta_title','url_canonical'));
+        return view('front.page.product')->with(compact('name_type','newproduct','topproduct','meta_desc','meta_keywords','meta_title','url_canonical'));
     }
     public function detailproduct(Request $r,$id)
     {
@@ -244,7 +245,7 @@ class pageController extends Controller
     }
     public function getManageBill()
     {
-         
+
         $bill=bill::where("id_user",Auth::user()->id)->orderby("id","desc")->paginate(4);
         return view('front.page.managebill',["bill"=>$bill]);
 
@@ -269,8 +270,8 @@ class pageController extends Controller
         }
         return redirect()->back();
     }
-    
-   
+
+
     public function addtocart(Request $r)
     {
         $prod=product::find($r->id);
@@ -283,7 +284,7 @@ class pageController extends Controller
         $data['weight']=0;
         $data['options']['img']=$prod->img;
         Cart::add($data);
-        
+
 
                 // <div class='cart'>
         $d="
@@ -300,8 +301,8 @@ class pageController extends Controller
         //                                             </div>
         //                                         </div>
         //                                      </div>";
-        //                         } 
-        // $d.="            
+        //                         }
+        // $d.="
         //                         <div class='cart-caption'>
         //                             <div class='cart-total text-right'>Tổng tiền: <span class='cart-total-value'>".Cart::priceTotal(0)." VND</span></div>
         //                             <div class='clearfix'></div>
@@ -322,11 +323,11 @@ class pageController extends Controller
                             echo 1;die();
                         }
                 }
-            }        
+            }
             echo $d;
         }
 
-    
+
 
      public function deltocart($rowId)
     {
@@ -351,7 +352,7 @@ class pageController extends Controller
                     session()->put('priceTotalAfterApply',$priceTotalAfterApply);
                     session()->put('coupon_number',$coupon_number);
                 }
-                
+
 
             }
         }
@@ -375,7 +376,7 @@ class pageController extends Controller
             $prod=product::find(Cart::get($rowId)->id);
             if($qty>$prod->quantity_stock)
             {
-                Cart::update($rowId, $prod->quantity_stock);                
+                Cart::update($rowId, $prod->quantity_stock);
                 echo $prod->quantity_stock;
             }else{
                 Cart::update($rowId, $qty);
@@ -428,8 +429,8 @@ class pageController extends Controller
         return redirect('shoppingCart')->with('loi','Mã giảm giá chỉ áp dụng cho hoá đơn từ '.$coupon->bill_price.' đ');
 
     }
-   
-    
+
+
      public function getcheckoutaddress()
     {
         $city=city::all();
@@ -468,7 +469,7 @@ class pageController extends Controller
         $user->id_district=$r->id_district;
         $user->id_ward=$r->id_ward;
         $user->save();
-      
+
 
         return redirect('checkoutfinal');
     }
@@ -498,7 +499,7 @@ class pageController extends Controller
                 $total_price_final=(int)Cart::priceTotal(0,'','') - session('coupon_number')+$fee;
             else
                 $total_price_final=(int)Cart::priceTotal(0,'','') +$fee;
-            
+
             return view('front.page.checkoutfinal',['fee'=>$fee,'total_price_final'=>$total_price_final]);
         }
         return redirect("checkoutaddress");
@@ -513,7 +514,7 @@ class pageController extends Controller
         $bill->id_coupon=$r->id_coupon;
         $bill->note=$r->note;
         $bill->feeship=$r->feeship;
-        $bill->total_price_first=(int)Cart::priceTotal(0,'','');   
+        $bill->total_price_first=(int)Cart::priceTotal(0,'','');
         if($r->id_coupon)
             $bill->id_coupon=$r->id_coupon;
         $bill->save();
@@ -532,7 +533,7 @@ class pageController extends Controller
         }
         $coupon=coupon::find(session("coupon_id"));
         if($coupon)
-        {   
+        {
             $coupon->qty--;
             $coupon->save();
         }
@@ -557,14 +558,14 @@ class pageController extends Controller
    //      return Socialite::driver('facebook')->redirect();
    //  }
    //  public function callbackFacebook(){
-   //    return $this->loginSocial('facebook');       
+   //    return $this->loginSocial('facebook');
    //  }
    // //login google
    //  public function loginGoogle(){
    //      return Socialite::driver('google')->redirect();
    // }
    //  public function callbackGoogle(){
-   //     return $this->loginSocial('google');       
+   //     return $this->loginSocial('google');
    //  }
    //  //function login social
    //  public function loginSocial($name){
@@ -592,6 +593,6 @@ class pageController extends Controller
    //      return redirect('');
    //    }
 
-}   
+}
 
 

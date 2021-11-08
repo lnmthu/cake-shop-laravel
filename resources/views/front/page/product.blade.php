@@ -7,9 +7,9 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="beta-products-list">
-							<h4>{{$newproduct->first()->type_product->name}} mới nhất</h4>
+							<h4>{{$name_type}} mới nhất</h4>
 							<div class="beta-products-details">
-								<p class="pull-left">{{count($newproduct)}} bánh</p>
+								<p class="pull-left">{{count($newproduct)>0 ? count($newproduct) : 0 }} bánh</p>
 								<div class="clearfix"></div>
 							</div>
 
@@ -18,7 +18,9 @@
 								@if($p->active==1)
 								<div class="col-sm-3">
 									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">@if($p->promotion_price){{"Khuyến mãi"}}@endif</div></div>
+                                    @if($p->promotion_price)
+										<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                                    @endif
 										<div class="single-item-header">
 											<a href="detailproduct/{{$p->id}}"><img class='copingImg' src="image/product/{{$p->img}}" alt=""></a>
 										</div>
@@ -53,17 +55,16 @@
 								</div>
 								@endif
 								@endforeach
-								<div class="row" style="text-align: center;">{{$newproduct->links()}}</div>
-
 							</div>
+                        <div class="customPagination" >{{$newproduct->links()}}</div>
 						</div> <!-- .beta-products-list -->
 
 						<div class="space50">&nbsp;</div>
 
 						<div class="beta-products-list">
-							<h4>{{$topproduct->first()->type_product->name}} ngon nhất</h4>
+							<h4>{{$name_type}} ngon nhất</h4>
 							<div class="beta-products-details">
-								<p class="pull-left">{{count($topproduct)}} bánh</p>
+								<p class="pull-left">{{count($topproduct)>0 ? count($newproduct) : 0 }} bánh</p>
 								<div class="clearfix"></div>
 							</div>
 							<div class="row">
@@ -71,7 +72,9 @@
 								@if($t->active==1)
 								<div class="col-sm-3">
 									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">@if($t->promotion_price){{"Khuyến mãi"}}@endif</div></div>
+                                    @if($t->promotion_price)
+										<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                                    @endif
 
 										<div class="single-item-header">
 											<a href="detailproduct/{{$t->id}}"><img class='copingImg' src="image/product/{{$t->img}}" alt=""></a>
@@ -108,9 +111,9 @@
 								@endif
 								@endforeach
 								<br>
-								<div class="row" style="text-align: center;">{{$topproduct->links()}}</div>
-
 							</div>
+                        <div class="row customPagination">{{$topproduct->links()}}</div>
+
 						</div> <!-- .beta-products-list -->
 					</div>
 				</div> <!-- end section with sidebar and main content -->

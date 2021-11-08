@@ -79,8 +79,7 @@
 					</tbody>
 					@endforeach
 				</table>
-				<div class="row" style="text-align: center;">{{$bill->links()}}</div>
-
+				<div class="customPagination" >{{$bill->links()}}</div>
 
 			<!-- End of Cart Collaterals -->
 			<div class="clearfix"></div>

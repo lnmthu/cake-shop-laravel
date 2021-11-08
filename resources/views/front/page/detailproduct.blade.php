@@ -37,7 +37,9 @@
 				<div class="col-sm-9">
 					<div class="row">
 						<div class="col-sm-4">
-						<div class="ribbon-wrapper"><div class="ribbon sale">@if($prod->promotion_price){{"Khuyến mãi"}}@endif</div></div>
+                        @if($prod->promotion_price)
+						<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                        @endif
 							<img class='copingBigImg' src="image/product/{{$prod->img}}" alt="">
 						</div>
 						<div class="col-sm-8">
@@ -106,8 +108,9 @@
 							@if($r->active==1)
 							<div class="col-sm-4">
 									<div class="single-item">
-										<div class="ribbon-wrapper"><div class="ribbon sale">@if($r->promotion_price){{"Khuyến mãi"}}@endif</div></div>
-
+                                    @if($r->promotion_price)
+										<div class="ribbon-wrapper"><p class="ribbon sale">{{"Khuyến mãi"}}</p></div>
+                                  @endif
 										<div class="single-item-header">
 											<a href="detailproduct/{{$r->id}}"><img class='copingImg' src="image/product/{{$r->img}}" alt=""></a>
 										</div>
@@ -124,7 +127,7 @@
 										</div>
 										<br>
 										<div class="single-item-caption">
-										@if($r->quantity_stock>0)
+										   @if($r->quantity_stock>0)
 											<form>
                                                 @csrf
                                            		<input type="hidden" value="1" class="qty_{{$r->id}}">

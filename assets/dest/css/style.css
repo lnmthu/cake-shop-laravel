@@ -128,10 +128,17 @@ Version: 1.0
 
     img.copingBigImg{
         float: left;
-        width:  500px;
-        height: 250px;
+        width:  300px;
+        height: 245px;
         background-size: cover;
+
     }
+    .beta-sales-item img {
+        float: left;
+        width:  100px;
+        height: 84px;
+        background-size: cover;
+        }
 
     .alert{
         margin-top: -1px;
@@ -140,7 +147,7 @@ Version: 1.0
     }
     .alert.for-detail{
         /*! padding: 7px 19px; */
-        margin-right: 350px;
+        margin-right: 290px;
     }
 
     textarea:focus,input:focus,select:focus,a:focus {
@@ -1692,10 +1699,7 @@ Version: 1.0
     margin-right:20px
     }
 
-    .beta-sales-item img {
-    width:55px;
-    height:auto
-    }
+
 
     .beta-sales-price {
     font-size:20px;
@@ -1934,7 +1938,8 @@ Version: 1.0
 
     .flash-del {
     text-decoration:line-through;
-    margin-right:10px
+    margin-right:10px;
+    font-size: 16px;
     }
 
     .flash-sale {
@@ -1947,12 +1952,14 @@ Version: 1.0
     ============================================================================= */
 
     .ribbon-wrapper {
-    width:60px;
-    height:60px;
-    overflow:hidden;
+    width:80px;
+    height:32px;
+    /*! overflow:hidden; */
     position:absolute;
     top:-3px;
-    right:-3px
+    right:-3px;
+    /*! margin: 8px; */
+    /*! background: burlywood; */
     }
 
     .ribbon {
@@ -1989,7 +1996,8 @@ Version: 1.0
     }
 
     .ribbon.sale {
-    background-color:#f90
+    background-color:#f90;
+    /*! margin-left: -17px; */
     }
 
     /* ==========================================================================
@@ -5239,3 +5247,13 @@ Version: 1.0
     h4, a,p,label, div{
         text-transform: capitalize;
     }
+    .customPagination{
+        /*! position: relative; */
+
+        /*! left: 40%; */
+        text-align: center;
+    }
+
+    .media-body {
+        font-size: 15px;
+        }
