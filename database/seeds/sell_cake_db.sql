@@ -1024,14 +1024,14 @@ INSERT INTO `product` (`id`, `name`, `id_type`, `description`, `quantity_stock`,
 (10, 'Bánh Chocolate Trái cây', 1, '<p>m&ocirc; tả</p>', 668105542, 27, 560000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>297981530</p>', 1, NULL, '2020-06-25 03:36:46'),
 (11, 'Peach Cake', 4, '<p>m&ocirc; tả</p>', 1955216726, 21, 1000000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1344564701</p>', 1, NULL, '2020-06-20 07:34:55'),
 (12, 'Bánh bông lan trứng muối I', 5, '<p>m&ocirc; tả</p>', 459369900, 0, 340000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2040512772</p>', 1, NULL, '2020-06-18 11:02:06'),
-(13, 'Bánh Scone Peach Cake', 1, '<p>m&ocirc; tả</p>', 22361876, 0, 20000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>194421648</p>', 1, NULL, '2020-06-18 19:59:33'),
+(13, 'Bánh Scone Peach Cake', 1, '<p>m&ocirc; tả</p>', 0, 0, 20000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>194421648</p>', 1, NULL, '2020-06-18 19:59:33'),
 (14, 'Bánh mì Loai I', 3, '<p>m&ocirc; tả</p>', 78130226, 0, 100000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1002973186</p>', 1, NULL, '2020-06-18 11:01:29'),
 (15, 'Bánh kem Chocolate Dâu I', 1, '<p>m&ocirc; tả</p>', 146653336, 0, 300000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2081904478</p>', 1, NULL, '2020-06-18 19:59:33'),
 (16, 'Bánh kem Trái cây I', 3, '<p>m&ocirc; tả</p>', 1752084193, 0, 400000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>949810647</p>', 1, NULL, '2020-06-18 11:00:45'),
-(17, 'Bánh kem Flower Fruit', 2, '<p>m&ocirc; tả</p>', 1187624060, 25, 500000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2119560969</p>', 1, NULL, '2020-06-23 08:52:45'),
+(17, 'Bánh kem Flower Fruit', 2, '<p>m&ocirc; tả</p>', 0, 25, 500000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2119560969</p>', 1, NULL, '2020-06-23 08:52:45'),
 (18, 'Bánh kem Strawberry Delight', 4, '<p>m&ocirc; tả</p>', 1787857016, 34, 600000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>2128277555</p>', 1, NULL, '2020-06-25 03:36:46'),
 (19, 'Ocean Pizza', 4, '<p>m&ocirc; tả</p>', 518218660, 27, 25000, 10000, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>1543235303</p>', 1, NULL, '2020-06-18 10:59:16'),
-(20, 'Bánh siêu cay 1', 6, '<p>m&ocirc; tả</p>', 0, 105, 300000, 250000, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>mbnmbmn</p>', 1, '2020-06-04 08:51:11', '2020-06-20 10:00:43'),
+(20, 'Bánh siêu cay 1', 6, '<p>m&ocirc; tả</p>', 5, 105, 300000, 250000, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>mbnmbmn</p>', 1, '2020-06-04 08:51:11', '2020-06-20 10:00:43'),
 (21, 'Bánh siêu cay 2', 6, '<p>m&ocirc; tả</p>', 0, 109, 320000, NULL, 'sukemdau.jpg', '<p>ti&ecirc;u đề</p>', '<p>12313212</p>', 1, '2020-06-04 10:38:32', '2020-06-20 10:00:43');
 
 -- --------------------------------------------------------
@@ -1054,8 +1054,8 @@ CREATE TABLE `slide` (
 --
 
 INSERT INTO `slide` (`id`, `name`, `img`, `active`, `created_at`, `updated_at`) VALUES
-(6, 'slide5', '1153665834_banh kem sinh nhat.jpg', 1, '2020-06-03 09:56:43', '2020-06-03 09:56:56'),
-(7, 'àgehnhmmghhg', '1771760344_1434429117-banh-su-kem-chien-20.jpg', 1, '2020-06-04 08:52:57', '2020-06-04 08:53:13');
+(6, 'slide5', 'banh kem sinh nhat.jpg', 1, '2020-06-03 09:56:43', '2020-06-03 09:56:56'),
+(7, 'àgehnhmmghhg', 'banh-man-thu-vi-nhat-1.jpg', 1, '2020-06-04 08:52:57', '2020-06-04 08:53:13');
 
 -- --------------------------------------------------------
 
