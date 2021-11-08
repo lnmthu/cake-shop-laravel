@@ -37,7 +37,7 @@
 					</div>
 					<div class="beta-comp">
 							<div class="cart">
-								<div class="beta-select"><i class="fa fa-shopping-cart"></i> Giỏ hàng (@if(Cart::count()>0){{Cart::count()." Bánh"}}@else{{"Trống"}}@endif)</div>
+								<div class="beta-select"><a href="shoppingCart"><i class="fa fa-shopping-cart"></i> Giỏ hàng (@if(Cart::count()>0){{Cart::count()." Bánh"}}@else{{"Trống"}}@endif) </a></div>
 								<!-- <div class="beta-dropdown cart-body">
 									@foreach(Cart::content() as $c)
 									<div class="cart-item">
