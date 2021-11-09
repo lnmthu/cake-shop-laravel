@@ -836,7 +836,7 @@ Version: 1.0
     color:#000
     }
 
-    input[type="text"],input[type="email"],input[type="url"],textarea {
+    input[type="text"],input[type="email"],input[type="password"],input[type="url"],textarea {
     width:100%;
     border:1px solid #e1e1e1;
     height:37px;
