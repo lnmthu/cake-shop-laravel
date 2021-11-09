@@ -65,7 +65,6 @@ class pageController extends Controller
     }
     public function home()
     {
-        dd('hello');
         $newproduct=product::orderby('created_at','desc')->where('active',1)->paginate(4,['*'], 'pag');
         $topproduct=product::orderby('unit_price','desc')->where('active',1)->paginate(4);
         return view('front.page.home',['newproduct'=>$newproduct,'topproduct'=>$topproduct]);
