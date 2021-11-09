@@ -47,8 +47,7 @@
 	<div id="fb-root"></div>
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0"></script>
 	<!--capcha-->
-	    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script type="text/javascript">
         $(document).ready(function($){
             $('.add-to-cart').click(function(){

@@ -25,7 +25,7 @@ var dug = function( opts ){
 			afterRender: function(){},
 			success: function(){},
 			error: function(){},
-			template: 'You need a template, silly :P'
+			template: ''
 		},
 		getTemplate = function( template ){
 			var template = template || options.template,
