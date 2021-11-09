@@ -9,6 +9,6 @@ class ward extends Model
 	protected $table="ward";
 	public function district()
 	{
-		return $this->belongsto("App\district","id_district","id");
-	}	
+		return $this->belongsTo("App\district","id_district","id");
+	}
 }

@@ -9,10 +9,10 @@ class Product extends Model
 	protected $table="product";
     public function bill_detail()
     {
-    	return $this->hasmany("App\bill_detail","id_product","id");
+    	return $this->hasMany("App\bill_detail","id_product","id");
     }
     public function type_product()
     {
-    	return $this->belongsto('App\type_product',"id_type","id");
+    	return $this->belongsTo('App\type_product',"id_type","id");
     }
 }

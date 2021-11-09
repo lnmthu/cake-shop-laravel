@@ -8,6 +8,6 @@ class Social extends Model
 {
 	protected $table="social";
 	public function user(){
-    return $this->belongsto("App\User","id_user","id");
+    return $this->belongsTo("App\User","id_user","id");
 }
 }

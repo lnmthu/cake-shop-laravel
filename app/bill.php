@@ -8,15 +8,15 @@ class Bill extends Model
 {
 	protected $table="bill";
     public function user()
-    {	
-    	return $this->belongsto("App\User","id_user","id");
+    {
+    	return $this->belongsTo("App\User","id_user","id");
     }
     public function bill_detail()
     {
-    	return $this->hasmany("App\bill_detail","id_bill","id");
+    	return $this->hasMany("App\bill_detail","id_bill","id");
     }
      public function coupon()
     {
-    	return $this->belongsto("App\coupon","id_coupon","id");
+    	return $this->belongsTo("App\coupon","id_coupon","id");
     }
 }

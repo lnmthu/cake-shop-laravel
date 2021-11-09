@@ -9,10 +9,10 @@ class city extends Model
     protected $table="city";
     public function district()
     {
-    	return $this->hasmany("App\district","id_city","id");
+    	return $this->hasMany("App\district","id_city","id");
     }
     public function ward()
     {
-    	return $this->hasmanythrough('App\ward','App\district','id_city','id_district',"id");
+    	return $this->hasManyThrough('App\ward','App\district','id_city','id_district',"id");
     }
 }
