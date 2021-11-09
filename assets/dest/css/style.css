@@ -5257,3 +5257,27 @@ Version: 1.0
     .media-body {
         font-size: 15px;
         }
+    .btn.facebook{
+        background: #3B5499;
+        color: #ffffff;
+        padding: 10px;
+         width: 50%;
+         text-align:
+          center; display:
+           block; border-radius:3px;
+        margin-left: 26%;
+    }
+    .btn.normal{
+        background: aliceblue;
+        color: black;
+        padding: 10px;
+         width: 50%;
+         text-align:
+          center; display:
+           block; border-radius:0px;
+        border: 0px;
+        margin-left: 26%;
+    }
+
+
+

@@ -36,9 +36,9 @@ return [
     ],
 
     'google' => [
-        'client_id' => '385350906620-9olq9jcbub9ndf54tqal5tb4hpv839gt.apps.googleusercontent.com',
-        'client_secret' => '99fcPo0fM-b8P7AqozNeJ6x4',
-        'redirect' => 'http://localhost/LaravelSell/public/login/callbackGoogle'
+        'client_id' => env('GOOGLE_ID'),
+        'client_secret' => env('GOOGLE_SECRET'),
+        'redirect' => env('GOOGLE_URL'),
     ],
 
 ];

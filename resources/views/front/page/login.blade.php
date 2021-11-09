@@ -23,7 +23,7 @@
 				<div class="row">
 					<div class="col-sm-3"></div>
 					<div class="col-sm-6">
-						<h4>Form Đăng nhập</h4>
+						<h4 style='text-align: center;'>Form Đăng nhập</h4>
 						<div class="space20">&nbsp;</div>
 						@if(session("thongbao"))
 							<div class="alert alert-danger">{{session("thongbao")}}</div>
@@ -48,13 +48,20 @@
 						<br/>
 
 						<!-- /ReCaptcha -->
+                        <div class="auth-button">
 
-
-						<div class="form-block">
-							<button  type="submit" class="btn btn-primary">Đăng nhập</button>
-						</div>
-						<a href="loginfacebook">Đăng nhập bằng Facebook </a><br>
-						<a href="logingoogle">Đăng nhập bằng Google </a>
+                            <div class="form-block">
+                                <button  type="submit" class="btn btn-primary normal">Đăng Nhập</button>
+                            </div>
+                            <div class="flex items-center justify-end mt-4">
+                                <a class="btn facebook" href="loginfacebook"
+                                    ">
+                                    Dăng Nhập Với Facebook
+                                </a>
+                            </div>
+                            {{-- Đăng nhập bằng Facebook </a><br> --}}
+                            <a href="logingoogle">Đăng nhập bằng Google </a>
+                        </div>
 
 					</div>
 					<div class="col-sm-3"></div>
