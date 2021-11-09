@@ -42,7 +42,7 @@
 							<label for="email">Email*</label>
 							<input  type="email" id="email" name="email" value="{{Auth::user()->email}}" required>
 						</div>
-						@if(!Auth::user()->social())
+						@if(!isset(Auth::user()->social()->name))
 						<div class="form-block">
 							<label for="phone">Password*</label>
 							<input  type="password" id="password" name="password" placeholder="Nhập password" required>
