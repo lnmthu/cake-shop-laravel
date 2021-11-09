@@ -1117,7 +1117,7 @@ INSERT INTO `type_product` (`id`, `name`, `description`, `created_at`, `updated_
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `quyen` tinyint(4) NOT NULL DEFAULT '0',
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
