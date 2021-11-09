@@ -2914,7 +2914,9 @@ Version: 1.0
     table.shop_table tfoot td .beta-btn,table.shop_table tfoot th .beta-btn {
     height:37px;
     background-color:#3a5c83;
-    color:#fff
+    color:#fff;
+    background: white;
+    color: black;
     }
 
     table.shop_table tfoot td .beta-btn i,table.shop_table tfoot th .beta-btn i {
@@ -3261,7 +3263,11 @@ Version: 1.0
     .beta-btn.primary {
     color:#606366;
     padding:10px 20px;
-    line-height:100%
+    line-height:100%;
+    text-align: center;
+    font-size: 14px;
+    font-style: inherit;
+    font-weight: unset;
     }
 
     .beta-btn.primary:hover {
@@ -4674,17 +4680,17 @@ Version: 1.0
     #footer a {
     color:#7b8fa3
     }
-    #footer.color-div a {color:gray}
+    #footer.color-div a {color:aliceblue;font-size: initial;}
     #footer a:hover {
     color:#f90
     }
-    .color-div p{color:gray;}
+    .color-div p{color:aliceblue;font-size: initial;}
 
     #footer h4.widget-title {
     color:#adbac8;
     margin-bottom:22px
     }
-    #footer.color-div h4.widget-title{color:gray;}
+    #footer.color-div h4.widget-title{color:gold;}
 
     #footer ul {
     list-style:none
@@ -5244,7 +5250,7 @@ Version: 1.0
     .beta-rotator {font-family: "Open Sans",sans-serif;}
     .history-slider span {font-family: "Open Sans",sans-serif;}
 
-    h4, a,p,label, div{
+    h4,button, a,p,label, div{
         text-transform: capitalize;
     }
     .customPagination{
@@ -5267,6 +5273,17 @@ Version: 1.0
            block; border-radius:3px;
         margin-left: 26%;
     }
+    .btn.google{
+        background: crimson;
+        color: #ffffff;
+        padding: 10px;
+         width: 50%;
+         text-align:
+          center; display:
+           block; border-radius:3px;
+        margin-left: 26%;
+        margin-top: 17px;
+    }
     .btn.normal{
         background: aliceblue;
         color: black;
@@ -5278,6 +5295,24 @@ Version: 1.0
         border: 0px;
         margin-left: 26%;
     }
+    .btn.normal-signup{
+        padding: 10px;
+         width: 50%;
+         text-align:
+          center; display:
+           block; border-radius:0px;
+        border: 0px;
+        margin-left: 26%;
+    }
 
-
+    .beta-btn.primary.order{
+    color:white;
+    padding:10px 20px;
+    line-height:100%;
+    text-align: center;
+    font-size: 14px;
+    font-style: inherit;
+    font-weight: unset;
+    background: dodgerblue;
+    }
 

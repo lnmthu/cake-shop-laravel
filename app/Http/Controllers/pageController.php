@@ -19,7 +19,8 @@ use App\city;
 use App\district;
 use App\ward;
 use App\address;
-
+use Illuminate\Routing\Route;
+use App\Notifications\OrderSuccess;
 class pageController extends Controller
 {
     public function __construct()
@@ -64,19 +65,6 @@ class pageController extends Controller
     }
     public function home()
     {
-       //session()->flush();
-       // var_dump(session('coupon_number'));die();
-        //var_dump(Auth::user()->id_city);die();
-        //var_dump((int)Cart::priceTotal(0,'',''));die();
-        //session()->flush();
-        //var_dump(bcrypt('123'));die();
-       // phpinfo();die;
-        // echo "<pre>";
-        // print_r(Cart::content());
-        // echo"</pre>";die();
-        //session()->put('test',"1231313");
-        //var_dump(session("test"));die();
-       // var_dump((int)Cart::priceTotal(0,'',''));die();
         $newproduct=product::orderby('created_at','desc')->where('active',1)->paginate(4,['*'], 'pag');
         $topproduct=product::orderby('unit_price','desc')->where('active',1)->paginate(4);
         return view('front.page.home',['newproduct'=>$newproduct,'topproduct'=>$topproduct]);
@@ -174,15 +162,14 @@ class pageController extends Controller
 
     public function postlogin(Request $r)
     {
-            $data = $r->validate(['g-recaptcha-response' => new Captcha(),]);
-        if(Auth::attempt(['email'=>$r->email,'password'=>$r->password]) && $data)
+        // $data = $r->validate(['g-recaptcha-response' => new Captcha(),]);
+        if(Auth::attempt(['email'=>$r->email,'password'=>$r->password]))
         {
-            if(Cart::count()>0)
+             if(Cart::count()>0)
                 return redirect('shoppingCart');
-            return redirect('');
+            return redirect('home');
         }
-        else
-            return redirect('login')->with('thongbao','Đăng nhập không thành công');
+        return redirect('login')->with('thongbao','Đăng nhập không thành công');
     }
     public function logout()
     {
@@ -537,23 +524,36 @@ class pageController extends Controller
             $coupon->qty--;
             $coupon->save();
         }
-        //$this->sendmail(Auth::user()->email,'Xác nhận đơn hàng #'.$bill->id,'front.page.sendmail',['fee'=>$r->feeship,'total_price_final'=>$r->total_price_final,"bill"=>$bill]);
+        $user=Auth::user();
+
         session()->forget('priceTotalAfterApply');
         session()->forget('coupon_number');
         session()->forget('coupon_id');
         session()->forget('code');
         Cart::destroy();
-        return redirect('checkoutfinal')->with('thongbao','Đặt hàng thành công');
-    }
-   //  public function sendmail($to_email,$subject,$body,$data)
-   //  {
 
-   //      Mail::send($body,$data,function($message) use($to_email,$subject){
-   //           $message->to($to_email)->subject($subject);//send this mail with subject
-   //          $message->from('minhthu512586@gmail.com');//send from this mail
-   //      });
-   //  }
-   //  //login facebook
+        if($user->email){
+            $data = ['billId'=>$bill->id,'fee'=>$r->feeship,'total_price_final'=>$r->total_price_final,"bill"=>$bill];
+            $user->notify(new OrderSuccess($data));
+            // $this->sendmail(Auth::user()->email,'Xác nhận đơn hàng #'.$bill->id,'front.page.sendmail',);
+
+            return redirect('checkoutfinal')->with('thongbao','Đặt hàng thành công.
+                                                    SellCake đã gửi thông tin đơn hàng đến email <i style="color:blue; text-transform: lowercase;">'. $user->email.
+                                                    '</i><br>Vui lòng kiểm tra thông tin đơn hàng tại <a style="color:blue;" href="managebill">đây</a>');
+        }
+        return redirect('checkoutfinal')->with('thongbao','Đặt hàng thành công. Tài khoản của bạn không có email để SellCake có thể gửi thông tin đơn.
+                                                    <br>Vui lòng kiểm tra thông tin đơn hàng tại <a style="color:blue;href="managebill">Đây</a>');
+    }
+//     public function sendmail($to_email,$subject,$body,$data, Request $request)
+//     {
+
+//         // Mail::send($body,$data,function($message) use($to_email,$subject){
+//         //      $message->to($to_email)->subject($subject);//send this mail with subject
+//         //     $message->from('minhthu512586@gmail.com');//send from this mail
+//         // })->queue;
+//         Mail::to($request->user())->queue(new OrderSuccess($data));
+//     }
+//    //  //login facebook
     public function loginFacebook(){
         return Socialite::driver('facebook')->redirect();
     }
@@ -590,7 +590,7 @@ class pageController extends Controller
         }
         if(Cart::count()>0)
                 return redirect('shoppingCart');
-        return redirect('');
+        return redirect('home');
       }
 
 }

@@ -24,7 +24,7 @@
 					<div class="col-sm-6">
 
 						@if(Auth::check())
-						<h4>Thông tin giao hàng</h4>
+						<h4 style="text-align:center;">Thông tin giao hàng</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
                             <div class="alert alert-danger">
@@ -99,7 +99,7 @@
                                    <input @if(Auth::user()->gender==3){{"checked"}}@endif id="gender" name="gender" value="3" type="radio"class="input-radio" style="width: 10%"><span style="margin-right: 5%">Khác</span>
 						</div>
 
-							<div class="text-center"><button class="beta-btn primary" type="submit" >Đặt hàng với thông tin này <i class="fa fa-chevron-right"></i></button></div>
+							<div class="text-center"><button class="beta-btn primary order" type="submit" >Xác nhận thông tin <i class="fa fa-chevron-right"></i></button></div>
 
 						@endif
 					</div>

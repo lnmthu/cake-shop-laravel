@@ -30,7 +30,8 @@
                     	@endif
                     	@if(session("thongbao"))
                     		<div class="alert alert-success">
-                    			{{session("thongbao")}}<br>
+                                 {!! session("thongbao")  !!}
+                                <br>
                     		</div>
                     	@endif
 					<!-- <div class="col-sm-6">
@@ -130,7 +131,7 @@
 									<li class="payment_method_bacs">
 										<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
 										<label for="payment_method_bacs">Thanh toán khi nhận hàng </label>
-										<div class="payment_box payment_method_bacs" style="display: none;">
+										<div class="payment_box payment_method_bacs" style="display: block;">
 											<?php $user=Auth::user();?>
 											Cửa hàng sẽ gửi hàng đến địa chỉ: <?php echo $user->address.", ".$user->ward->name.", ".$user->district->name.", ".$user->city->name;?>. Bạn xem hàng rồi thanh toán tiền cho nhân viên giao hàng
 										</div>
@@ -139,7 +140,7 @@
 									<li class="payment_method_cheque">
 										<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="ATM" data-order_button_text="">
 										<label for="payment_method_cheque">Chuyển khoản </label>
-										<div class="payment_box payment_method_cheque" style="display: block;">
+										<div class="payment_box payment_method_cheque" style="display: none;">
 											Chuyển tiền đến tài khoản sau:
 											<br>+ Số tài khoản: 123 456 789
 											<br>+ Chủ TK: Nguyễn A
@@ -154,7 +155,7 @@
 							<div class="your-order-head"><h5>Ghi chú</h5></div>
 									<textarea style="width: 550px" id="notes" name="note" placeholder="Điền thôn tin ghi chú đơn hàng"></textarea>
 									<br><br>
-							<div class="text-center"><button class="beta-btn primary" type="submit" >Đặt hàng <i class="fa fa-chevron-right"></i></button></div>
+							<div class="text-center"><button class="beta-btn primary order" type="submit" >đặt hàng <i class="fa fa-chevron-right"></i></button></div>
 							@endif
 
 							</div>

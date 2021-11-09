@@ -90,7 +90,7 @@
 								<form action="applyCoupon" method="post">
 									@csrf
 									<input type="text" name="code"  placeholder="Mã giảm giá">
-									<button type="submit" class="beta-btn primary">Áp dụng mã giảm giá<i class="fa fa-chevron-right"></i></button>
+									<button type="submit" class="beta-btn primary">Áp dụng <i class="fa fa-chevron-right"></i></button>
 								</form>
 								@endif
 								</div>
@@ -116,7 +116,7 @@
 						<div class="cart-totals-row"><span>Thành tiền:</span> <span>{{Cart::priceTotal(0,"",".")}} <u>đ</u></span></div>
 					@endif
 
-					<a class="beta-btn primary" href="checkoutaddress" name="proceed">Đặt hàng <i class="fa fa-chevron-right"></i></a>
+					<a class="beta-btn primary order" href="checkoutaddress" name="proceed">tiến hành đặt hàng <i class="fa fa-chevron-right"></i></a>
 
 				</div>
 

@@ -54,13 +54,18 @@
                                 <button  type="submit" class="btn btn-primary normal">Đăng Nhập</button>
                             </div>
                             <div class="flex items-center justify-end mt-4">
-                                <a class="btn facebook" href="loginfacebook"
-                                    ">
+                                <a class="btn facebook" href="loginfacebook"">
                                     Dăng Nhập Với Facebook
                                 </a>
                             </div>
+                            <div class="flex items-center justify-end mt-4">
+                                <a class="btn google" href="logingoogle"">
+                                    Dăng Nhập Với Google
+                                </a>
+                            </div>
+
                             {{-- Đăng nhập bằng Facebook </a><br> --}}
-                            <a href="logingoogle">Đăng nhập bằng Google </a>
+                            {{-- <a href="logingoogle">Đăng nhập bằng Google </a> --}}
                         </div>
 
 					</div>

@@ -23,7 +23,7 @@
 				<div class="row">
 					<div class="col-sm-3"></div>
 					<div class="col-sm-6">
-						<h4>Form Đăng ký</h4>
+						<h4 style="text-align:center">Form Đăng ký</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
                     		<div class="alert alert-danger">
@@ -68,10 +68,9 @@
                                    <input id="gender" name="gender" value="3" type="radio"class="input-radio" style="width: 10%"><span style="margin-right: 5%">Khác</span>
 						</div>
 						<div class="g-recaptcha" data-sitekey="{{env('CAPTCHA_KEY')}}"></div>
-
-						<div class="form-block">
-							<button type="submit" class="btn btn-primary">Đăng ký</button>
-						</div>
+                        <div class="form-block">
+                                <button  type="submit" class="btn btn-primary normal-signup">Đăng Ký</button>
+                        </div>
 					</div>
 					<div class="col-sm-3"></div>
 				</div>

@@ -25,8 +25,7 @@
 	@yield("content")
 
 	@include("front.layout.footer")
-	@include("front.layout.copyright")
-
+	{{-- @include("front.layout.copyright") --}}
 
 	<!-- include js files -->
 	<script src="assets/dest/js/jquery.js"></script>

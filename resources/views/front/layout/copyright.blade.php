@@ -1,4 +1,4 @@
-<div class="copyright">
+{{-- <div class="copyright">
 		<div class="container">
 			<p class="pull-left">Privacy policy. (&copy;) 2014</p>
 			<p class="pull-right pay-options">
@@ -9,4 +9,4 @@
 			</p>
 			<div class="clearfix"></div>
 		</div> <!-- .container -->
-	</div> <!-- .copyright -->
+	</div> <!-- .copyright --> --}}
