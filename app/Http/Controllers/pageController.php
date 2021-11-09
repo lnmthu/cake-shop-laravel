@@ -554,44 +554,44 @@ class pageController extends Controller
    //      });
    //  }
    //  //login facebook
-   //  public function loginFacebook(){
-   //      return Socialite::driver('facebook')->redirect();
-   //  }
-   //  public function callbackFacebook(){
-   //    return $this->loginSocial('facebook');
-   //  }
-   // //login google
-   //  public function loginGoogle(){
-   //      return Socialite::driver('google')->redirect();
-   // }
-   //  public function callbackGoogle(){
-   //     return $this->loginSocial('google');
-   //  }
-   //  //function login social
-   //  public function loginSocial($name){
-   //      $provider = Socialite::driver($name)->stateless()->user();
-   //      $account = Social::where('name',$name)->where('id',$provider->id)->first();
-   //      if($account){
-   //          Auth::attempt(['email'=>$account->user->email,'password'=>'']);
-   //          session()->put('social',$account->id);
-   //      }else{
-   //          $user = new User();
-   //          $user->name=$provider->name;
-   //          $user->email=$provider->email;
-   //          $user->password=bcrypt('');
-   //          $user->save();
-   //          $Social = new Social();
-   //          $Social->id=$provider->id;
-   //          $Social->name=$name;
-   //          $Social->id_user=$user->id;
-   //          $Social->save();
-   //          Auth::attempt(['email'=>$user->email,'password'=>'']);
-   //          session()->put('social',$Social->id);
-   //      }
-   //      if(Cart::count()>0)
-   //              return redirect('shoppingCart');
-   //      return redirect('');
-   //    }
+    public function loginFacebook(){
+        return Socialite::driver('facebook')->redirect();
+    }
+    public function callbackFacebook(){
+      return $this->loginSocial('facebook');
+    }
+   //login google
+    public function loginGoogle(){
+        return Socialite::driver('google')->redirect();
+   }
+    public function callbackGoogle(){
+       return $this->loginSocial('google');
+    }
+    //function login social
+    public function loginSocial($name){
+        $provider = Socialite::driver($name)->stateless()->user();
+        $account = Social::where('name',$name)->where('id',$provider->id)->first();
+        if($account){
+            Auth::attempt(['email'=>$account->user->email,'password'=>'']);
+            session()->put('social',$account->id);
+        }else{
+            $user = new User();
+            $user->name=$provider->name;
+            $user->email=$provider->email;
+            $user->password=bcrypt('');
+            $user->save();
+            $Social = new Social();
+            $Social->id=$provider->id;
+            $Social->name=$name;
+            $Social->id_user=$user->id;
+            $Social->save();
+            Auth::attempt(['email'=>$user->email,'password'=>'']);
+            session()->put('social',$Social->id);
+        }
+        if(Cart::count()>0)
+                return redirect('shoppingCart');
+        return redirect('');
+      }
 
 }
 

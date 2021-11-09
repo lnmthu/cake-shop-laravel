@@ -30,15 +30,15 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'facebook' => [
-        'client_id' => '178027310118744',  //client face của bạn
-        'client_secret' => '125fffa5cb0fddd411dfb2fc553355fd',  //client app service face của bạn
-        'redirect' => 'http://localhost/LaravelSell/public/login/callbackFacebook' //callback trả về
+        'client_id' => env('FACEBOOK_APP_ID'),
+        'client_secret' => env('FACEBOOK_APP_SECRET'),
+        'redirect' => env('FACEBOOK_APP_CALLBACK_URL'),
     ],
 
     'google' => [
         'client_id' => '385350906620-9olq9jcbub9ndf54tqal5tb4hpv839gt.apps.googleusercontent.com',
         'client_secret' => '99fcPo0fM-b8P7AqozNeJ6x4',
-        'redirect' => 'http://localhost/LaravelSell/public/login/callbackGoogle' 
+        'redirect' => 'http://localhost/LaravelSell/public/login/callbackGoogle'
     ],
 
 ];
