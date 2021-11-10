@@ -66,10 +66,10 @@
                             <a href="#"><i class="fa fa-users fa-fw"></i>User<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="admin/users">Danh sách</a>
+                                    <a href="admin/users/list">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="admin/users/create">Thêm</a>
+                                    <a href="admin/users/add">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -89,7 +89,7 @@
                         <li>
                             <a href="admin/feeship/manage"><i class="fa fa-bar-chart-o fa-fw"></i>Phí vận chuyển<span></span></a>
                         </li>
-                        
+
                         <li>
                             <a href="admin/bill/list"><i class="fa fa-bar-chart-o fa-fw"></i>Hóa đơn<span></span></a>
                         </li>

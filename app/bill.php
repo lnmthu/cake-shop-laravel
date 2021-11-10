@@ -17,6 +17,6 @@ class Bill extends Model
     }
      public function coupon()
     {
-    	return $this->belongsTo("App\coupon","id_coupon","id");
+    	return $this->hasOne("App\coupon","id_coupon","id");
     }
 }

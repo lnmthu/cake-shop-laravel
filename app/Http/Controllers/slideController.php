@@ -23,7 +23,7 @@ class slideController extends Controller
     	$file=$r->file("img");
 		$duoi=$file->getClientOriginalExtension();
 		if($duoi!="jpg" && $duoi!="png" && $duoi!= "jpeg")
-	    	return redirect("admin/slide/add")->with ("loi",'Làm ơn chọn hình có đuôi ".jpg", ".png", ".jpeg"');	
+	    	return redirect("admin/slide/add")->with ("loi",'Làm ơn chọn hình có đuôi ".jpg", ".png", ".jpeg"');
 	    $name=$file->getClientOriginalName();
 	    $hinh=rand()."_".$name;
 	    while (file_exists("image/slide/".$hinh)) {
@@ -32,7 +32,7 @@ class slideController extends Controller
 	    $file->move("image/slide/",$hinh);
 	    $slide->img=$hinh;
         $slide->save();
-    	return redirect("admin/slide/add")->with ("thongbao",'Thêm thành công');	
+    	return redirect("admin/slide/add")->with ("thongbao",'Thêm thành công');
     }
     public function getEdit($id){
     	$slide=slide::find($id);
@@ -46,7 +46,7 @@ class slideController extends Controller
     	if($r->hasfile("img"))
     	{
     		if(file_exists("image/slide/".$slide->img))
-    			unlink(public_path("image/slide/".$slide->img));
+    			unlink("image/slide/".$slide->img);
     		$file=$r->file("img");
     		$duoi=$file->getClientOriginalExtension();
     		if($duoi!="jpg" && $duoi!="jpeg" && $duoi!="png")
@@ -67,7 +67,7 @@ class slideController extends Controller
     {
     	$slide=slide::find($id);
     	if(file_exists("image/slide/".$slide->img))
-    			unlink(public_path("image/slide/".$slide->img));
+    			unlink("image/slide/".$slide->img);
     	$slide->delete();
     	return redirect("admin/slide/list")->with("thongbao","Xóa thành công");
     }

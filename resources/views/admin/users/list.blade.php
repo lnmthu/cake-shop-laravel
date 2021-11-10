@@ -50,9 +50,9 @@
                                     <td>Khác</td>
                                 @else
                                     <td></td>
-                                @endif    
+                                @endif
                                 <td>{{$u->phone_number}}</td>
-                                @if($u->city&&$u->district&&$u->ward) 
+                                @if($u->city&&$u->district&&$u->ward)
                                 <td>{{$u->city->name}}</td>
                                 <td>{{$u->district->name}}</td>
                                 <td>{{$u->ward->name}}</td>
@@ -62,18 +62,11 @@
                                 <td></td>
                                 @endif
                                 <td>{{$u->address}}</td>
-                                <td class="center">
-                                    <form action="admin/users/{{$u->id}}" method="POST">
-                                        @csrf
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" ><i class="fa fa-trash-o  fa-fw"></i></button>
-                                    </form>
-                                </td>
-                               {{--  <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/users/delete/{{$u->id}}">Xóa</a></td> --}}
-                                <td class="center"><a href="admin/users/{{$u->id}}/edit"><i class="fa fa-pencil fa-fw"></i></a></td>
+                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/users/delete/{{$u->id}}">Xóa</a></td>
+                                <td class="center"><a href="admin/users/edit/{{$u->id}}"><i class="fa fa-pencil fa-fw"></i></a></td>
                             </tr>
                             @endforeach
-                            
+
                         </tbody>
                     </table>
                 </div>

@@ -12,12 +12,12 @@ class productController extends Controller
 	{
 		$product=product::all();
 		return view("admin.product.list",["product"=>$product]);
-	}  
+	}
 	public function getAdd()
 	{
 		$type=type_product::all();
 		return view("admin.product.add",["type"=>$type]);
-	}  
+	}
 	public function postAdd(Request $r)
 	{
 		 $this->validate($r,
@@ -43,16 +43,16 @@ class productController extends Controller
 		if($r->changeOption)
 			if($r->promotion_price>$r->unit_price)
             	return redirect("admin/product/add")->with ("loi",'Làm ơn nhập giá khuyến mãi nhỏ hơn giá gốc');
-            else	
+            else
 				$product->promotion_price=$r->promotion_price;
 		//img
 		if($r->hasfile("img"))
-		{	
-			 
+		{
+
 			$file=$r->file("img");
 			$duoi=$file->getClientOriginalExtension();
         	if($duoi!="jpg" && $duoi!="png" && $duoi!= "jpeg")
-            	return redirect("admin/product/add")->with ("loi",'Làm ơn chọn hình có đuôi ".jpg" hoặc ".png" hoặc ".jpeg"');	
+            	return redirect("admin/product/add")->with ("loi",'Làm ơn chọn hình có đuôi ".jpg" hoặc ".png" hoặc ".jpeg"');
 	        $name=$file->getClientOriginalName();
 	        $hinh=rand()."_".$name;
 	        while (file_exists("image/product/".$hinh)) {
@@ -60,12 +60,12 @@ class productController extends Controller
 	         }
 	         $file->move("image/product/",$hinh);
 	         $product->img=$hinh;
-     	}	
+     	}
 		//img
 		$product->save();
 		return redirect("admin/product/add")->with("thongbao","Thêm thành công");
-	} 
-	
+	}
+
 	public function getEdit($id)
 	{
 		$product=product::find($id);
@@ -96,15 +96,15 @@ class productController extends Controller
 		if($r->changeOption)
 			if($r->promotion_price>$r->unit_price)
             	return redirect("admin/product/add")->with ("loi",'Làm ơn nhập giá khuyến mãi nhỏ hơn giá gốc');
-            else	
+            else
 				$product->promotion_price=$r->promotion_price;
 		if($r->hasfile("img"))
-		{	
-			
+		{
+
 			$file=$r->file("img");
        		 $duoi=$file->getClientOriginalExtension();
         	if($duoi!="jpg" && $duoi!="png" && $duoi!= "jpeg")
-            	return redirect("admin/product/edit/".$id)->with ("loi",'Làm ơn chọn hình có đuôi ".jpg" hoặc ".png" hoặc ".jpeg"');	
+            	return redirect("admin/product/edit/".$id)->with ("loi",'Làm ơn chọn hình có đuôi ".jpg" hoặc ".png" hoặc ".jpeg"');
         	$name=$file->getClientOriginalName();
        		$hinh=rand()."_".$name;
         	while (file_exists("image/product/".$hinh)) {
@@ -112,7 +112,7 @@ class productController extends Controller
          }
          $file->move("image/product/",$hinh);
          if(file_exists("image/product/".$product->img))
-				unlink(public_path("image/product/".$product->img));
+				unlink("image/product/".$product->img);
          $product->img=$hinh;
 
 		}
@@ -122,8 +122,11 @@ class productController extends Controller
 	public function getDelete($id)
 	{
 		$product=product::find($id);
+        if($product->bill_detail()->first()){
+            return redirect("admin/product/list")->with("loi","Xóa thất bại vì tồn tại các hoá đơn chứa sản phẩm này");
+        }
 		$product->delete();
 		return redirect("admin/product/list")->with("thongbao","Xóa thành công");
 	}
-	  
+
 }
