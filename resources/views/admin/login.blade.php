@@ -39,7 +39,7 @@
                     		</div>
                     	@endif
                         @if(count($errors)>0)
-                            <div class="alert alert-danger"> 
+                            <div class="alert alert-danger">
                                 @foreach($errors->all() as $er)
                                     {{$er}}<br>
                                 @endforeach
@@ -49,10 +49,10 @@
                             <fieldset>
                             	<input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" value='admin123@gmail.com' autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="123456">
                                 </div>
                                  <!--capcha-->
                                  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
