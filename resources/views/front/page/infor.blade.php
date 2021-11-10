@@ -24,7 +24,7 @@
 					<div class="col-sm-3"></div>
 					<div class="col-sm-6">
 						@if(Auth::check())
-						<h4>Form Thông tin</h4>
+						<h4 style="text-align:center;">Form Thông tin</h4>
 						<div class="space20">&nbsp;</div>
 						@if(count($errors)>0)
                     		<div class="alert alert-danger">
@@ -114,7 +114,7 @@
 						<div class="g-recaptcha" data-sitekey="{{env('CAPTCHA_KEY')}}"></div>
 
 						<div class="form-block">
-							<button type="submit" class="btn btn-primary">Sửa</button>
+							<button type="submit" class="btn btn-primary normal-signup">Cập nhật</button>
 						</div>
 						@endif
 					</div>

@@ -493,7 +493,6 @@ class pageController extends Controller
     }
     public function postcheckoutfinal(Request $r)
     {
-       //var_dump((int)Cart::priceTotal(0,'',''));die();
         $bill=new bill();
         $bill->id_user=Auth::user()->id;
         $bill->total_price_final=$r->total_price_final;
@@ -537,23 +536,15 @@ class pageController extends Controller
             $user->notify(new OrderSuccess($data));
             // $this->sendmail(Auth::user()->email,'Xác nhận đơn hàng #'.$bill->id,'front.page.sendmail',);
 
-            return redirect('checkoutfinal')->with('thongbao','Đặt hàng thành công.
-                                                    SellCake đã gửi thông tin đơn hàng đến email <i style="color:blue; text-transform: lowercase;">'. $user->email.
+            return redirect('checkoutfinal')->with('thongbao','Cảm ơn bạn đã mua bánh của SellCake.
+                                                    SellCake đã gửi thông tin đơn hàng đến email của bạn: <i style="color:blue; text-transform: lowercase;">'. $user->email.
                                                     '</i><br>Vui lòng kiểm tra thông tin đơn hàng tại <a style="color:blue;" href="managebill">đây</a>');
         }
-        return redirect('checkoutfinal')->with('thongbao','Đặt hàng thành công. Tài khoản của bạn không có email để SellCake có thể gửi thông tin đơn.
-                                                    <br>Vui lòng kiểm tra thông tin đơn hàng tại <a style="color:blue;href="managebill">Đây</a>');
+        return redirect('checkoutfinal')->with('thongbao','Cảm ơn bạn đã mua bánh của SellCake.
+                                                        Tài khoản của bạn không có email để SellCake có thể gửi thông tin đơn hàng.
+                                                        <br>Vui lòng kiểm tra thông tin đơn hàng tại <a style="color:blue;href="managebill">Đây</a>');
     }
-//     public function sendmail($to_email,$subject,$body,$data, Request $request)
-//     {
 
-//         // Mail::send($body,$data,function($message) use($to_email,$subject){
-//         //      $message->to($to_email)->subject($subject);//send this mail with subject
-//         //     $message->from('minhthu512586@gmail.com');//send from this mail
-//         // })->queue;
-//         Mail::to($request->user())->queue(new OrderSuccess($data));
-//     }
-//    //  //login facebook
     public function loginFacebook(){
         return Socialite::driver('facebook')->redirect();
     }

@@ -84,7 +84,7 @@
 						@endif
 					</div> -->
 							@if(Cart::count()>0)
-					<div class="col-sm-6">
+					<div class="col-sm-6 ">
 						<div class="your-order">
 							<div class="your-order-head"><h5>Đơn hàng của bạn</h5></div>
 

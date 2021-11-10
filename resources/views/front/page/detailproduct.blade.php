@@ -77,7 +77,7 @@
 
 							</form>
 							<br>
-							<div class="fb-like" data-href="http://localhost/LaravelSell/public/detailproduct/{{$prod->id}}" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+							<div class="fb-like" data-href="" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
 
 						</div>
 					</div>
@@ -85,19 +85,19 @@
 					<div class="space40">&nbsp;</div>
 					<div class="woocommerce-tabs">
 						<ul class="tabs">
-							<li><a href="#tab-description">Description</a></li>
-							<li><a href="#tab-reviews">Reviews (0)</a></li>
+							<li><a href="#tab-reviews">Bình luận người dùng</a></li>
+                            <li><a href="#tab-description">Mô tả sản phẩm</a></li>
 						</ul>
 
-						<div class="panel" id="tab-description">
+
+						<div class="panel" id="tab-reviews">
+                        	<div class="fb-comments" data-href="{{url('/detailproduct/'.$prod->id)}}" data-numposts="20" data-width=""></div>
+						</div>
+                        <div class="panel" id="tab-description">
 
 							<p>{!!$prod->description!!}</p>
 						</div>
-						<div class="panel" id="tab-reviews">
-							<p>No Reviews</p>
-						</div>
 
-						<div class="fb-comments" data-href="http://localhost/LaravelSell/public/detailproduct/{{$prod->id}}" data-numposts="20" data-width=""></div>
 					</div>
 					<div class="space50">&nbsp;</div>
 					<div class="beta-products-list">
