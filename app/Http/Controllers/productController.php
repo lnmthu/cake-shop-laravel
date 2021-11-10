@@ -48,7 +48,6 @@ class productController extends Controller
 		//img
 		if($r->hasfile("img"))
 		{
-
 			$file=$r->file("img");
 			$duoi=$file->getClientOriginalExtension();
         	if($duoi!="jpg" && $duoi!="png" && $duoi!= "jpeg")
@@ -58,6 +57,7 @@ class productController extends Controller
 	        while (file_exists("image/product/".$hinh)) {
 	              $hinh=rand()."_".$name;
 	         }
+
 	         $file->move("image/product/",$hinh);
 	         $product->img=$hinh;
      	}

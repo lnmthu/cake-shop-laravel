@@ -11,7 +11,7 @@
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-7" style="padding-bottom:120px">
                     	@if(count($errors)>0)
-                    		<div class="alert alert-danger"> 
+                    		<div class="alert alert-danger">
                     			@foreach($errors->all() as $er)
                     				{{$er}}<br>
                     			@endforeach
@@ -22,7 +22,7 @@
                     			{{session("thongbao")}}<br>
                     		</div>
                     	@endif
-                       <form action="admin/users" method="POST">
+                       <form action="admin/users/add" method="POST">
                         	 <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <fieldset>
                                 <legend>Phần bắt buộc</legend>
@@ -53,7 +53,7 @@
                             </div>
                         </fieldset>
                             <fieldset>
-                                <legend> 
+                                <legend>
                                 <input type="checkbox" name="changeOption" id="changeOption"> Phần tùy chọn
                                 </legend>
                                 <div class="form-group">
@@ -68,20 +68,20 @@
                                                        <option value="{{$c->id}}">{{$c->name}}</option>
                                         @endforeach
                                     </select>
-                                </div> 
+                                </div>
                                 <div class="form-block">
                                     <label>Quận/Huyện</label>
                                     <select data-validation="required"  data-validation-error-msg="Làm ơn chọn quận huyện" disabled="" name="id_district" id="district" class="form-control choose option">
                                         <option value=""> - - Chọn quận huyện - - </option>
                                     </select>
-                                </div>    
+                                </div>
                                 <div class="form-block">
                                     <label>Phường/Xã/Thị trấn</label>
                                     <select disabled="" name="id_ward" id="ward" class="form-control option" data-validation="required"  data-validation-error-msg="Làm ơn chọn xá phường thị trấn">
                                         <option value=""> - - Chọn xã phường thị trận - - </option>
-                                    
+
                                     </select>
-                                </div>  
+                                </div>
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
                                         <input disabled="" class="form-control option" name="address" placeholder="Nhập địa chỉ" data-validation="required"  data-validation-error-msg="Làm ơn nhập địa chi"/>
@@ -89,7 +89,7 @@
                                     <div class="form-group">
                                         <label>Ghi chú</label>
                                         <textarea disabled=""  name="note" class="form-control option" rows="3"></textarea>
-                                    </div>  
+                                    </div>
                                     <div class="form-group">
                                         <label>Giới tính</label>
                                         <label class="radio-inline">
@@ -104,8 +104,8 @@
                                                                     <input type="range" name="" min="1" max ="100">
 
                                     </div>
-                                    
-                                    <br>                       
+
+                                    <br>
                                     <button type="submit" class="btn btn-default">Thêm</button>
                                     <button type="reset" class="btn btn-default">Làm mới</button>
                             </fieldset>
@@ -155,7 +155,7 @@
 
         });
      });
-        
+
     });
 </script>
 

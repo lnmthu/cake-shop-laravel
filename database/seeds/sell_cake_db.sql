@@ -1092,7 +1092,7 @@ CREATE TABLE `type_product` (
   `description` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `active` int(1) NOT NULL,
+  `active` tinyint(4) NOT NULL DEFAULT '0',
   `title` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `keyword` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
