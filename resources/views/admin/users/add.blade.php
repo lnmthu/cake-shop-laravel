@@ -22,6 +22,11 @@
                     			{{session("thongbao")}}<br>
                     		</div>
                     	@endif
+                        @if(session("loi"))
+                    		<div class="alert alert-danger">
+                    			{{session("loi")}}<br>
+                    		</div>
+                    	@endif
                        <form action="admin/users/add" method="POST">
                         	 <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <fieldset>

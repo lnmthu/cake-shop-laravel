@@ -8,7 +8,7 @@ class CouponController extends Controller
 {
 	public function getAjax($condition)
 	{
-		
+
 	}
     public function getList()
     {
@@ -22,8 +22,8 @@ class CouponController extends Controller
     }
     public function postAdd(Request $r)
     {
- 
-    	
+
+
 		$coupon=new coupon();
 		$coupon->name=$r->name;
 		$coupon->code=$r->code;
@@ -35,7 +35,7 @@ class CouponController extends Controller
 		$coupon->active=$r->active;
 		$coupon->save();
 		return redirect("admin/coupon/add")->with("thongbao","Thêm thành công");
-		
+
     }
     public function getEdit($id)
     {
@@ -50,7 +50,7 @@ class CouponController extends Controller
 		$coupon->qty=$r->qty;
 		$coupon->condition=$r->condition;
 		if($r->condition==0 && $r->number>=100)
-			return redirect("admin/coupon/edit/".$id)->with("loi","Làm ơn nhập số phần trăm giảm phải nhỏ hơn 100%");	
+			return redirect("admin/coupon/edit/".$id)->with("loi","Làm ơn nhập số phần trăm giảm phải nhỏ hơn 100%");
 		$coupon->number=$r->number;
 		$coupon->active=$r->active;
 		$coupon->save();

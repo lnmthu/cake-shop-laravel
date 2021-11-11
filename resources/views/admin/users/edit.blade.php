@@ -11,7 +11,7 @@
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-7" style="padding-bottom:120px">
                         @if(count($errors)>0)
-                            <div class="alert alert-danger"> 
+                            <div class="alert alert-danger">
                                 @foreach($errors->all() as $er)
                                     {{$er}}<br>
                                 @endforeach
@@ -22,8 +22,7 @@
                                 {{session("thongbao")}}<br>
                             </div>
                         @endif
-                        <form action="admin/users/{{$user->id}}" method="POST">
-                            <input type="hidden" name="_method" value="PUT">
+                        <form action="admin/users/edit/{{$user->id}}" method="POST">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                              <fieldset>
                                 <legend>Phần bắt buộc</legend>
@@ -35,7 +34,7 @@
                                 <label class="radio-inline">
                                     <input @if($user->quyen==1){{"checked"}}@endif  name="quyen" value="1" type="radio">Admin
                                 </label>
-                            </div>                           
+                            </div>
                              <div class="form-group">
                                 <label>Tên</label>
                                 <input class="form-control" name="name" placeholder="Nhập tên" value="{{$user->name}}" data-validation="required"  data-validation-error-msg="Làm ơn nhập tên" />
@@ -44,16 +43,16 @@
                                 <label>Email</label>
                                 <input disabled="" class="form-control" name="email" placeholder="Nhập email" value="{{$user->email}}" data-validation="email" data-validation-error-msg="Làm ơn nhập E-mail hợp lệ" />
                             </div>
-                            
+
                             </fieldset>
                              <fieldset>
                                 <legend><input type="checkbox" id="changePass" name="changePass"> Đổi mật khẩu</legend>
-                            
+
                             <div class="form-group">
                                 <label>Mật khẩu</label>
                                 <input disabled="" class="form-control password" type="password" placeholder="Nhập mật khẩu" name="pass_confirmation"  data-validation="length" data-validation-length="min8" data-validation-error-msg="Làm ơn nhập mật khẩu ít nhất 8 kí tự"  />
                             </div>
-                            
+
                             <div class="form-group">
                                 <label>Nhập lại mật khẩu</label>
                                 <input disabled="" class="form-control password" type="password"  placeholder="Nhập lại mật khẩu" name="pass" data-validation="confirmation" data-validation-error-msg="Làm ơn nhập lại mật khẩu khớp với mật khẩu ban đầu"/>
@@ -71,14 +70,14 @@
                                 <select disabled="" data-validation="required"  data-validation-error-msg="Làm ơn chọn tỉnh thành phố" name="id_city" id="city" class="form-control choose option">
                                         <option value=""> - - Chọn tỉnh thành phố - - </option>
                                     @foreach($city as $c)
-                                        <option  @if($user->id_city==$c->id) 
+                                        <option  @if($user->id_city==$c->id)
                                                         {{"selected"}}
                                                         <?php $district=$c->district; ?>
                                                  @endif
                                                        value="{{$c->id}}">{{$c->name}}</option>
                                     @endforeach
                                 </select>
-                        </div> 
+                        </div>
                         <div class="form-block">
                             <label>Quận/Huyện</label>
                             <select disabled="" data-validation="required"  data-validation-error-msg="Làm ơn chọn quận huyện"  name="id_district" id="district" class="form-control choose option">
@@ -90,7 +89,7 @@
                                    @endforeach
                                @endif
                             </select>
-                        </div>    
+                        </div>
                         <div class="form-block">
                             <label>Phường/Xã/Thị trấn</label>
                             <select disabled=""  data-validation="required"  data-validation-error-msg="Làm ơn chọn xá phường thị trấn" name="id_ward" id="ward" class="form-control option">
@@ -102,7 +101,7 @@
                                @endforeach
                             @endif
                             </select>
-                        </div>   
+                        </div>
                             <div class="form-group">
                                 <label>Địa chỉ</label>
                                 <input disabled="" class="form-control option" name="address" placeholder="Nhập địa chỉ" value="{{$user->address}}" data-validation="required"  data-validation-error-msg="Làm ơn nhập địa chỉ"
@@ -111,7 +110,7 @@
                             <div class="form-group">
                                 <label>Ghi chú</label>
                                 <textarea disabled="" name="note" class="form-control option" rows="3">{{$user->note}}</textarea>
-                            </div>  
+                            </div>
                             <div class="form-group">
                                 <label>Giới tính</label>
                                 <label class="radio-inline">
@@ -124,7 +123,7 @@
                                     <input @if($user->gender==3){{"checked"}}@endif  disabled="" id="option3" name="gender" value="3" type="radio">Khác
                                 </label>
                             </div>
-                            <br>                       
+                            <br>
                             <button type="submit" class="btn btn-default">Sửa</button>
                             <button type="reset" class="btn btn-default">Làm mới</button>
                         <form>

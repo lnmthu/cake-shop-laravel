@@ -183,18 +183,17 @@ CREATE TABLE `coupon` (
   `number` int(11) NOT NULL,
   `active` tinyint(4) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `bill_price` double NOT NULL
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `coupon`
 --
 
-INSERT INTO `coupon` (`id`, `name`, `code`, `qty`, `condition`, `number`, `active`, `created_at`, `updated_at`, `bill_price`) VALUES
-(6, '321', '321', 319, 0, 50, 0, '2020-06-18 03:27:44', '2020-06-25 18:21:53', 0),
-(7, '456', '456', 455, 0, 10, 1, '2020-06-18 03:28:22', '2020-07-03 23:25:54', 0),
-(8, '987', '987', 981, 1, 100000, 0, '2020-06-18 04:24:37', '2020-06-25 18:22:01', 500000);
+INSERT INTO `coupon` (`id`, `name`, `code`, `qty`, `condition`, `number`, `active`, `created_at`, `updated_at`) VALUES
+(6, '321', '321', 319, 0, 50, 0, '2020-06-18 03:27:44', '2020-06-25 18:21:53'),
+(7, '456', '456', 455, 0, 10, 1, '2020-06-18 03:28:22', '2020-07-03 23:25:54'),
+(8, '987', '987', 981, 1, 100000, 0, '2020-06-18 04:24:37', '2020-06-25 18:22:01');
 
 -- --------------------------------------------------------
 
@@ -1054,7 +1053,6 @@ CREATE TABLE `slide` (
 --
 
 INSERT INTO `slide` (`id`, `name`, `img`, `active`, `created_at`, `updated_at`) VALUES
-(6, 'slide1', '1430967449-pancake-sau-rieng-6.jpg', 1, '2020-06-03 09:56:43', '2020-06-03 09:56:56'),
 (7, 'slide2', '20131108144733.jpg', 1, '2020-06-04 08:52:57', '2020-06-04 01:53:13'),
 (8, 'slide3', 'banh-mi-nhan-man.jpg', 1, '2020-06-04 08:52:53', '2020-06-04 03:53:13'),
 (9, 'slide4', 'crepe-dao.jpg', 1, '2020-06-04 08:52:52', '2020-06-04 04:53:13');

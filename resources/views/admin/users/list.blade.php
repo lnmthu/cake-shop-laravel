@@ -14,6 +14,11 @@
                                 {{session("thongbao")}}<br>
                             </div>
                         @endif
+                        @if(session("loi"))
+                            <div class="alert alert-danger">
+                                {{session("loi")}}<br>
+                            </div>
+                        @endif
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr align="center">
