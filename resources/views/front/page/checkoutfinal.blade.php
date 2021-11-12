@@ -34,6 +34,12 @@
                                 <br>
                     		</div>
                     	@endif
+                        @if(session("loi"))
+                                <div class="alert alert-danger">
+                                    {!! session("loi")  !!}
+                                    <br>
+                                </div>
+                    	    @endif
 					<!-- <div class="col-sm-6">
 						@if(Auth::check())
 						<h4>Form Thông tin</h4>
@@ -124,14 +130,25 @@
 
 									<div class="clearfix"></div>
 							</div>
-
+                            @php
+                                $usd = $total_price_final/23083;
+                            @endphp
 							<div class="your-order-head"><h5>Hình thức thanh toán</h5></div>
 							<div class="your-order-body">
 								<ul class="payment_methods methods">
+                                <li class="payment_method_bacs">
+										<input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="PAYPAL" checked="checked" data-order_button_text="">
+										<label for="payment_method_paypal">Thanh toán bằng PayPal </label>
+										<div class="payment_box payment_method_paypal" style="display: block; background:none;">
+                                            <div id="paypal-button"></div>
+                                            <input type="hidden" id="check_ordered_paypal" name="check_ordered_paypal" value="No">
+										    <input type="hidden" id="usd-paypal" value="{{ round($usd,2) }}">
+										</div>
+									</li>
 									<li class="payment_method_bacs">
-										<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
+										<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" data-order_button_text="">
 										<label for="payment_method_bacs">Thanh toán khi nhận hàng </label>
-										<div class="payment_box payment_method_bacs" style="display: block;">
+										<div class="payment_box payment_method_bacs" style="display: none;">
 											<?php $user=Auth::user();?>
 											Cửa hàng sẽ gửi hàng đến địa chỉ: <?php echo $user->address.", ".$user->ward->name.", ".$user->district->name.", ".$user->city->name;?>. Bạn xem hàng rồi thanh toán tiền cho nhân viên giao hàng
 										</div>
@@ -155,7 +172,7 @@
 							<div class="your-order-head"><h5>Ghi chú</h5></div>
 									<textarea style="width: 550px" id="notes" name="note" placeholder="Điền thôn tin ghi chú đơn hàng"></textarea>
 									<br><br>
-							<div class="text-center"><button class="beta-btn primary order" type="submit" >đặt hàng <i class="fa fa-chevron-right"></i></button></div>
+							<div class="text-center"><button data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" class="beta-btn primary order" id="submit-order" type="submit" >đặt hàng <i class="fa fa-chevron-right"></i></button></div>
 							@endif
 
 							</div>
@@ -165,4 +182,51 @@
 			</form>
 		</div> <!-- #content -->
 	</div> <!-- .container -->
+@endsection
+@section("script")
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+  var usd = document.getElementById("usd-paypal").value
+  paypal.Button.render({
+    // Configure environment
+    env: 'sandbox',
+    client: {
+      sandbox: 'AU0FnS5x5kPDXa-wEmlpdtfr5Q_V3UZgr_AeKYiB7za47vV7u7SRlUOx8yWrUPe3FUiqnWh3UAdwThIy',
+      production: 'demo_production_client_id'
+    },
+    // Customize button (optional)
+    locale: 'en_US',
+    style: {
+      size: 'medium',
+      color: 'gold',
+      shape: 'pill',
+    },
+
+    // Enable Pay Now checkout flow (optional)
+    commit: true,
+
+    // Set up a payment
+    payment: function(data, actions) {
+      return actions.payment.create({
+        transactions: [{
+          amount: {
+            total:  usd,
+            currency: 'USD'
+          }
+        }]
+      });
+    },
+    // Execute the payment
+    onAuthorize: function(data, actions) {
+      return actions.payment.execute().then(function() {
+        // Show a confirmation message to the buyer
+        window.alert('Cảm ơn bạn đã mua hàng!')
+        document.getElementById('check_ordered_paypal').value = 'Yes';
+        document.getElementById('submit-order').click() ;
+      });
+    }
+  }, '#paypal-button');
+</script>
+
+
 @endsection

@@ -493,6 +493,9 @@ class pageController extends Controller
     }
     public function postcheckoutfinal(Request $r)
     {
+        if($r->payment_method=="PAYPAL" && $r->check_ordered_paypal == "No"){
+            return redirect('checkoutfinal')->with('loi','Vui lòng thanh toán PayPal trước khi đặt hàng');
+        }
         $bill=new bill();
         $bill->id_user=Auth::user()->id;
         $bill->total_price_final=$r->total_price_final;
